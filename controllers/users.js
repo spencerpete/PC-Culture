@@ -66,7 +66,7 @@ export const verify = async (req, res) => {
     }
   } catch (error) {
     console.log(error.message);
-    res.status(401).send('Nout Authorized');
+    res.status(401).send('Not Authorized');
   }
 };
 
