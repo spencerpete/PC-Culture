@@ -10,4 +10,4 @@ router.post('/products', restrict, controllers.createProduct);
 router.put('/products/:id/edit', restrict, controllers.updateProduct);
 router.delete('/products/:id', restrict, controllers.deleteProduct);
 
-export default router
+export default router;
