@@ -8,7 +8,7 @@ const TOKEN_KEY = process.env.TOKEN_KEY || 'notagoodkey';
 
 const today = new Date();
 const exp = new Date(today);
-exp.setDate(getDate() + 30);
+exp.setDate(today.getDate() + 30);
 
 export const signUp = async (req, res) => {
   try {
