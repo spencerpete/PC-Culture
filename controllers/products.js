@@ -9,6 +9,7 @@ export const getProducts = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
 export const getOneProduct = async (req, res) => {
   try {
     const { id } = req.params;
@@ -43,6 +44,7 @@ export const updateProduct = async (req, res) => {
     console.log(error.message);
   }
 };
+
 export const deleteProduct = async (req, res) => {
   try {
     const { id } = req.params;
