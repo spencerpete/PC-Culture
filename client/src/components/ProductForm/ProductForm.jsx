@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProductForm({ onChange, onSubmit }) {
+const ProductForm = ({ onChange, onSubmit }) => {
   return (
     <form onSubmit={onSubmit}>
       <input type="text" placeholder="Name" onChange={onChange} />
@@ -13,4 +13,4 @@ function ProductForm({ onChange, onSubmit }) {
   );
 }
 
-export default ProductForm;
+export default ProductForm

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ProductForm from '../../components/ProductForm/ProductForm'
+import { createProduct } from '../../services/products'
 
 const productSchema = {
   name: '',
@@ -10,7 +11,7 @@ const productSchema = {
   link: ''
 }
 
-function ProductCreate() {
+const ProductCreate = () => {
 const [product, setProduct] = useState(productSchema)
 
 function handleChange(e) {
@@ -18,8 +19,9 @@ function handleChange(e) {
   setProduct(prevVal => ({...prevVal, [name]: value}))
 }
 
-async function onSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault()
+  await createProduct(product)
 }
   return (
     <div className="form">
@@ -31,6 +33,3 @@ async function onSubmit(e) {
 }
 
 export default ProductCreate
-
-
-
