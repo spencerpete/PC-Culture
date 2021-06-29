@@ -4,6 +4,7 @@ const Select = ({ onChange }) => {
   return (
     <div>
       <select name="category" onChange={onChange}>
+        <option value="" disabled selected>Category</option>
         <option value="cpu">CPU</option>
         <option value="ram">RAM</option>
         <option value="motherboard">Motherboard</option>
