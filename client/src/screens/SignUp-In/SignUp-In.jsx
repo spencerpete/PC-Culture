@@ -22,7 +22,7 @@ const SignUpIn = props => {
     );
   };
   return (
-    <>
+    <Layout>
       <div className="sign-up/in-page">
         <div className="UserFormTitle">
           <div onClick={() => setUserAction('sign-up')}>Sign Up</div>
@@ -31,7 +31,7 @@ const SignUpIn = props => {
         </div>
         {userAction === 'sign-in' ? SignInForm() : SignUpForm()}
       </div>
-    </>
+    </Layout>
   );
 };
 export default SignUpIn;
