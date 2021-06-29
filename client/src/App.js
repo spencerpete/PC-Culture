@@ -1,25 +1,27 @@
 import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import SignUpIn from './screens/SignUp-In/SignUp-In';
+import { verifyUser } from './services/users';
+const App = () => {
+  const [user, setUser] = useState(null);
 
-function App() {
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser();
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path="/SignUp">
+        <SignUpIn setUser={setUser} />
+      </Route>
     </div>
   );
-}
+};
 
 export default App;

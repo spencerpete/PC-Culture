@@ -3,9 +3,10 @@ import Footer from '../Footer/Footer';
 
 const Layout = props => (
   <div>
-    <Nav user={props.user} />
+    <Nav />
     <div>{props.children}</div>
     <Footer />
   </div>
 );
+
 export default Layout;
