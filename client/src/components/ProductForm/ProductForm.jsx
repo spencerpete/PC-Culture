@@ -17,7 +17,7 @@ const ProductForm = ({ onChange, onSubmit, product }) => {
         placeholder="Description"
         onChange={onChange}
       />
-      <Select onChange={onChange} />
+      <Select onChange={onChange} value={product?.category}/>
       <input
         type="text"
         value={product?.imgURL}

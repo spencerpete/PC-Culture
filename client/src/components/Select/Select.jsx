@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Select = ({ onChange }) => {
+const Select = ({ onChange, value }) => {
   return (
     <div>
-      <select name="category" onChange={onChange}>
-        <option value="" disabled selected>Category</option>
+      <select value={value} name="category" onChange={onChange}>
+        <option value="" disabled >Category</option>
         <option value="cpu">CPU</option>
         <option value="ram">RAM</option>
         <option value="motherboard">Motherboard</option>
