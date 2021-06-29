@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import ProductForm from '../../components/ProductForm/ProductForm'
-import { createProduct } from '../../services/products'
+import { useState } from 'react';
+import ProductForm from '../../components/ProductForm/ProductForm';
+import { createProduct } from '../../services/products';
 
 const productSchema = {
   name: '',
@@ -8,28 +8,28 @@ const productSchema = {
   description: '',
   category: '',
   imgeURL: '',
-  link: ''
-}
+  link: '',
+};
 
 const ProductCreate = () => {
-const [product, setProduct] = useState(productSchema)
+  const [product, setProduct] = useState(productSchema);
 
-function handleChange(e) {
-  const {name, value} = e.target
-  setProduct(prevVal => ({...prevVal, [name]: value}))
-}
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setProduct(prevVal => ({ ...prevVal, [name]: value }));
+  }
 
-async function handleSubmit(e) {
-  e.preventDefault()
-  await createProduct(product)
-}
+  async function handleSubmit(e) {
+    e.preventDefault();
+    await createProduct(product);
+  }
   return (
     <div className="form">
       <h2 className="form-heading">Add Product</h2>
-      <ProductForm onChange={handleChange} onSubmit={handleSubmit}/>
+      <ProductForm onChange={handleChange} onSubmit={handleSubmit} />
       {/* <Button /> */}
     </div>
-  )
-}
+  );
+};
 
-export default ProductCreate
+export default ProductCreate;
