@@ -18,7 +18,7 @@ export const getOneProduct = async id => {
   }
 };
 
-export const creatProduct = async form => {
+export const createProduct = async form => {
   try {
     const res = await api.post('/products', form);
     return res.data;
