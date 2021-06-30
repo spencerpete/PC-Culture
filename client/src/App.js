@@ -5,8 +5,8 @@ import ProductList from './screens/ProductList/ProductList';
 import ProductCreate from './screens/ProductCreate/ProductCreate';
 import ProductEdit from './screens/ProductEdit/ProductEdit';
 import Home from './screens/Home/Home';
-import './App.css';
 import SignUpIn from './screens/SignUp-In/SignUp-In';
+
 const App = () => {
   const [user, setUser] = useState(null);
 
