@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getOneProduct, updateProduct } from '../../services/products';
+import { useParams, useHistory } from 'react-router-dom';
+import { getOneProduct, updateProduct, deleteProduct } from '../../services/products';
 import { ProductForm, Button } from '../../components';
 
 const ProductEdit = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
+  const history = useHistory()
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -22,15 +23,23 @@ const ProductEdit = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const product = await updateProduct(id, product);
+    const upDatedProduct = await updateProduct(id, product);
+    history.push(`/products/${id}`)
+  }
+
+  async function handleDelete() {
+    const deleted = await deleteProduct(id);
+
   }
 
   return (
     <div className="form">
       <h2 className="form-heading">Edit Product</h2>
-      <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
-      <Button text="Update"/>
-      <Button text="Delete"/>
+      <form onSubmit={handleSubmit}>
+        <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
+        <Button text="Update" />
+        <Button text="Delete" onClick={handleDelete} />
+      </form>
     </div>
   );
 };

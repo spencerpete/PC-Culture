@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom'
 import './SignIn.css';
 import { signIn } from '../../services/users';
 
@@ -9,6 +10,8 @@ const SignIn = props => {
     isError: false,
     errorMsg: '',
   });
+
+  const history = useHistory()
 
   const handleChange = e => {
     setForm({
@@ -23,6 +26,7 @@ const SignIn = props => {
     try {
       const user = await signIn(form);
       setUser(user);
+      history.goBack()
     } catch (error) {
       console.error(error);
       setForm({

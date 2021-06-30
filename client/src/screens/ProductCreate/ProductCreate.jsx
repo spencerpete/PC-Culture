@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import {ProductForm, Button} from '../../components';
+import { useHistory } from 'react-router-dom'
+import { ProductForm, Button } from '../../components';
 import { createProduct } from '../../services/products';
 
-const productSchema = {
-  name: '',
-  price: '',
-  description: '',
-  category: 'category',
-  imgeURL: '',
-  link: '',
-};
-
 const ProductCreate = () => {
-  const [product, setProduct] = useState(productSchema);
+  const [product, setProduct] = useState({
+    name: '',
+    price: '',
+    description: '',
+    category: 'category',
+    imgURL: '',
+    link: '',
+  });
+
+  const history = useHistory()
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -22,12 +23,15 @@ const ProductCreate = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     await createProduct(product);
+    history.push('/products')
   }
   return (
     <div className="form">
       <h2 className="form-heading">Add Product</h2>
-      <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
-      <Button text="Add"/>
+      <form onSubmit={handleSubmit}>
+        <ProductForm onChange={handleChange} product={product} />
+        <Button text="Add" />
+      </form>
     </div>
   );
 };
