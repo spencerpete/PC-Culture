@@ -1,8 +1,8 @@
 import Select from '../Select/Select';
 
-const ProductForm = ({ onChange, onSubmit, product }) => {
+const ProductForm = ({ onChange, product }) => {
   return (
-    <form onSubmit={onSubmit}>
+    <>
       <input type="text" name="name" value={product?.name} placeholder="Name" onChange={onChange} />
       <input
         type="text"
@@ -17,7 +17,7 @@ const ProductForm = ({ onChange, onSubmit, product }) => {
         placeholder="Description"
         onChange={onChange}
       />
-      <Select onChange={onChange} value={product?.category}/>
+      <Select onChange={onChange} value={product?.category} />
       <input
         type="text"
         value={product?.imgURL}
@@ -32,7 +32,7 @@ const ProductForm = ({ onChange, onSubmit, product }) => {
         placeholder="Link to Buy"
         onChange={onChange}
       />
-    </form>
+    </>
   );
 };
 
