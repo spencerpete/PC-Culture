@@ -26,7 +26,7 @@ export default function SignUp(props) {
     try {
       const user = await signUp(form);
       setUser(user);
-      history.push('/products');
+      history.goBack();
     } catch (error) {
       console.error(error);
       setForm({

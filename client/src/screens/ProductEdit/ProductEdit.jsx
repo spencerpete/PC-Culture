@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams, Redirect } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { getOneProduct, updateProduct, deleteProduct } from '../../services/products';
 import { ProductForm, Button } from '../../components';
 
 const ProductEdit = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
+  const history = useHistory()
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -23,11 +24,12 @@ const ProductEdit = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     const upDatedProduct = await updateProduct(id, product);
-    <Redirect to={`/products/${id}`} />;
+    history.push(`/products/${id}`)
   }
 
   async function handleDelete() {
     const deleted = await deleteProduct(id);
+
   }
 
   return (

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Redirect } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { ProductForm, Button } from '../../components';
 import { createProduct } from '../../services/products';
 
@@ -13,6 +13,8 @@ const ProductCreate = () => {
     link: '',
   });
 
+  const history = useHistory()
+
   function handleChange(e) {
     const { name, value } = e.target;
     setProduct(prevVal => ({ ...prevVal, [name]: value }));
@@ -21,7 +23,7 @@ const ProductCreate = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     await createProduct(product);
-    <Redirect to="/products" />
+    history.push('/products')
   }
   return (
     <div className="form">
