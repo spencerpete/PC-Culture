@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getOneProduct, updateProduct } from '../../services/products';
-import ProductForm from '../../components/ProductForm/ProductForm';
+import { ProductForm, Button } from '../../components';
 
 const ProductEdit = () => {
   const [product, setProduct] = useState({});
@@ -29,6 +29,8 @@ const ProductEdit = () => {
     <div className="form">
       <h2 className="form-heading">Edit Product</h2>
       <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
+      <Button text="Update"/>
+      <Button text="Delete"/>
     </div>
   );
 };
