@@ -6,7 +6,7 @@ const productSchema = {
   name: '',
   price: '',
   description: '',
-  category: '',
+  category: 'category',
   imgeURL: '',
   link: '',
 };
@@ -26,7 +26,7 @@ const ProductCreate = () => {
   return (
     <div className="form">
       <h2 className="form-heading">Add Product</h2>
-      <ProductForm onChange={handleChange} onSubmit={handleSubmit} />
+      <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
       {/* <Button /> */}
     </div>
   );
