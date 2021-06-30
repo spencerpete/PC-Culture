@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import ProductForm from '../../components/ProductForm/ProductForm';
+import {ProductForm, Button} from '../../components';
 import { createProduct } from '../../services/products';
 
 const productSchema = {
   name: '',
   price: '',
   description: '',
-  category: '',
+  category: 'category',
   imgeURL: '',
   link: '',
 };
@@ -26,8 +26,8 @@ const ProductCreate = () => {
   return (
     <div className="form">
       <h2 className="form-heading">Add Product</h2>
-      <ProductForm onChange={handleChange} onSubmit={handleSubmit} />
-      {/* <Button /> */}
+      <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
+      <Button text="Add"/>
     </div>
   );
 };
