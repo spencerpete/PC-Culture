@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { verifyUser } from './services/users';
-import ProductList from './screens/ProductList/ProductList.Jsx';
+import ProductList from './screens/ProductList/ProductList';
 import ProductCreate from './screens/ProductCreate/ProductCreate';
 import ProductEdit from './screens/ProductEdit/ProductEdit';
 import Home from './screens/Home/Home';
 import SignUpIn from './screens/SignUp-In/SignUp-In';
 import './App.css';
+import ProductDetail from './screens/ProductDetail/ProductDetail';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -30,6 +31,9 @@ const App = () => {
         </Route>
         <Route exact path="/products/new">
           <ProductCreate />
+        </Route>
+        <Route exact path="/product/:id">
+          <ProductDetail />
         </Route>
         <Route exact path="/products/:id/edit">
           <ProductEdit />
