@@ -6,7 +6,7 @@ import { ProductForm, Button } from '../../components';
 const ProductEdit = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  const history = useHistory()
+  const history = useHistory();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -24,23 +24,24 @@ const ProductEdit = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     const upDatedProduct = await updateProduct(id, product);
-    history.push(`/products/${id}`)
+    history.push(`/products/${id}`);
   }
 
   async function handleDelete() {
     const deleted = await deleteProduct(id);
-
   }
 
   return (
-    <div className="form">
-      <h2 className="form-heading">Edit Product</h2>
-      <form onSubmit={handleSubmit}>
-        <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
-        <Button text="Update" />
-        <Button text="Delete" onClick={handleDelete} />
-      </form>
-    </div>
+    <Layout>
+      <div className="form">
+        <h2 className="form-heading">Edit Product</h2>
+        <form onSubmit={handleSubmit}>
+          <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
+          <Button text="Update" />
+          <Button text="Delete" onClick={handleDelete} />
+        </form>
+      </div>
+    </Layout>
   );
 };
 
