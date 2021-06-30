@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { signUp } from '../../services/users';
 
 export default function SignUp(props) {
@@ -10,6 +11,8 @@ export default function SignUp(props) {
     isError: false,
     errorMsg: '',
   });
+
+  const history = useHistory();
 
   const handleChange = e => {
     setForm({
@@ -23,6 +26,7 @@ export default function SignUp(props) {
     try {
       const user = await signUp(form);
       setUser(user);
+      history.goBack();
     } catch (error) {
       console.error(error);
       setForm({
