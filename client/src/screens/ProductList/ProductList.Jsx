@@ -1,18 +1,49 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
-import Layout from '../../components/Layout/Layout';
-import Product from '../../components/Product/product';
-import Search from '../../components/Search/Search';
+import { Layout, Product, Search, Sort } from '../../components';
+import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort';
 
 const ProductList = props => {
   const [products, setProducts] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
+  const [applySort, setApplySort] = useState(false);
+  const [sortType, setSortType] = useState('name-ascending');
+
   useEffect(() => {
     const fetchProducts = async () => {
       const listProducts = await getProducts();
       setProducts(listProducts);
+      setSearchResult(listProducts);
     };
     fetchProducts();
   }, []);
+
+  const handleSort = type => {
+    if (type !== '' && type !== undefined) {
+      setSortType(type);
+    }
+    switch (type) {
+      case 'name-ascending':
+        setSearchResult(AZ(searchResult));
+        break;
+      case 'name-descending':
+        setSearchResult(ZA(searchResult));
+        break;
+      case 'price-ascending':
+        setSearchResult(lowestFirst(searchResult));
+        break;
+      case 'price-descending':
+        setSearchResult(highestFirst(searchResult));
+        break;
+      default:
+        break;
+    }
+  };
+
+  if (applySort) {
+    handleSort(sortType);
+    setApplySort(false);
+  }
 
   const handleSubmit = event => event.preventDefault();
 
