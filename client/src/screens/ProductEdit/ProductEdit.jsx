@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import { getOneProduct, updateProduct, deleteProduct } from '../../services/products';
 import { ProductForm, Button } from '../../components';
 
@@ -23,10 +23,11 @@ const ProductEdit = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     const upDatedProduct = await updateProduct(id, product);
+    <Redirect to={`/products/${id}`} />;
   }
 
   async function handleDelete() {
-    const deleted = await deleteProduct(id)
+    const deleted = await deleteProduct(id);
   }
 
   return (
@@ -35,7 +36,7 @@ const ProductEdit = () => {
       <form onSubmit={handleSubmit}>
         <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
         <Button text="Update" />
-        <Button text="Delete" onClick={handleDelete}/>
+        <Button text="Delete" onClick={handleDelete} />
       </form>
     </div>
   );

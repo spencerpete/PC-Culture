@@ -28,12 +28,12 @@ const App = () => {
           <ProductList user={user} />
         </Route>
         <Route exact path="/products/new">
-          <ProductCreate />
+          {user ? <ProductCreate /> : <Redirect to="/sign-up"/>}
         </Route>
         <Route exact path="/products/:id/edit">
-          <ProductEdit />
+          {user ? <ProductEdit /> : <Redirect to="/sign-up"/>}
         </Route>
-        <Route path="/SignUp">
+        <Route path="/sign-up">
           <SignUpIn setUser={setUser} />
         </Route>
       </Switch>

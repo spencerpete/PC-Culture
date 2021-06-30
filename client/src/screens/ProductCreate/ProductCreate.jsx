@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Redirect } from 'react-router-dom'
 import { ProductForm, Button } from '../../components';
 import { createProduct } from '../../services/products';
 
@@ -20,6 +21,7 @@ const ProductCreate = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     await createProduct(product);
+    <Redirect to="/products" />
   }
   return (
     <div className="form">
