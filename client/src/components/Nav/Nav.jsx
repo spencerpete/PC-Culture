@@ -11,7 +11,7 @@ export default function Nav() {
     <div className="nav">
       <nav>
         <FiMenu onClick={handleMenu} />
-        {clicked ? <SideNav /> : ''}
+        {clicked ? <SideNav handleMenu={handleMenu} /> : ''}
         <Link to="/">PC-Culture</Link>
       </nav>
     </div>
