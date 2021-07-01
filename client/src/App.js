@@ -31,7 +31,7 @@ const App = () => {
         <Route exact path="/products/new">
           {user ? <ProductCreate /> : <Redirect to="/sign-up"/>}
         </Route>
-        <Route exact path="/product/:id">
+        <Route exact path="/products/:id">
           <ProductDetail />
         </Route>
         <Route exact path="/products/:id/edit">
