@@ -14,7 +14,7 @@ export default function Nav() {
         <FiMenu className="menu" onClick={handleMenu} />
         {clicked ? <SideNav /> : ''}
         <Link className="landing-link" to="/">
-          PC-Culture
+          PC Culture
         </Link>
       </nav>
     </div>
