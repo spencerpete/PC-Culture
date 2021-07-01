@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
-import { Layout, Product, Search, Sort } from '../../components';
+import { Layout, Product, Search, Filter, Sort } from '../../components';
 import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/Sort';
 
 const ProductList = props => {
@@ -45,6 +45,11 @@ const ProductList = props => {
     setApplySort(false);
   }
 
+  function handleFilter(event) {
+    const filteredResults = products.filter(product => product.category === event.target.value);
+    setSearchResult(filteredResults)
+  }
+
   const handleSubmit = event => event.preventDefault();
 
   const handleSearch = event => {
@@ -56,6 +61,7 @@ const ProductList = props => {
   return (
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
+      <Filter handleFilter={handleFilter}/>
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div>
         {searchResult.map((product, index) => {
