@@ -47,13 +47,15 @@ const ProductList = props => {
 
   function handleFilter(event) {
     const filteredResults = products.filter(product => product.category === event.target.value);
-    setSearchResult(filteredResults)
+    setSearchResult(filteredResults);
   }
 
   const handleSubmit = event => event.preventDefault();
 
   const handleSearch = event => {
-    const results = products.filter(product => product.name(event.target.value));
+    const results = products.filter(product =>
+      product.name.toLowerCase().includes(event.target.value.toLowerCase())
+    );
     setSearchResult(results);
     setApplySort(true);
   };
@@ -61,7 +63,7 @@ const ProductList = props => {
   return (
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Filter handleFilter={handleFilter}/>
+      <Filter handleFilter={handleFilter} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div>
         {searchResult.map((product, index) => {
