@@ -4,7 +4,7 @@ const Search = props => {
       <input
         className="search"
         value={props.value}
-        // onChange={e => props.handleSearch(e)}
+        onChange={e => props.handleSearch(e)}
         name="Search"
         placeholder="Search PC-Culture"
         type="text"
