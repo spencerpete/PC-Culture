@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 import SideNav from '../SideNav/SideNav';
 import './Nav.css';
 export default function Nav() {
-  const [clicked, setClicked] = useState(false);
-  const handleMenu = () => {
-    setClicked(prev => !prev);
+  const [show, setShow] = useState(false);
+  const toggleShow = () => {
+    setShow(prev => !prev);
   };
   return (
     <div className="nav">
       <nav>
-        <FiMenu className="menu" onClick={handleMenu} />
-        {clicked ? <SideNav /> : ''}
+        <FiMenu onClick={toggleShow} />
+        <SideNav toggleShow={toggleShow} show={show}/>
         <Link className="landing-link" to="/">
           PC Culture
         </Link>

@@ -1,0 +1,15 @@
+.sidenav-container {
+  @apply bg-black bg-opacity-50 fixed w-full h-full transform -translate-x-full transition duration-300
+}
+
+.sidenav {
+  @apply flex flex-col w-2/4 fixed h-full bg-white transform -translate-x-full transition duration-300
+}
+
+.sidenav-link {
+  @apply mb-6 font-bold text-sm
+}
+
+.show {
+  @apply transform translate-x-0
+}
