@@ -7,7 +7,7 @@ const getToken = () => {
 };
 
 const api = axios.create({
-  baseUrl:
+  baseURL:
     process.env.NODE_ENV === 'production'
       ? 'https://pc-culture.herokuapp.com/api'
       : 'http://localhost:3000/api',

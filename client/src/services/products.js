@@ -18,7 +18,7 @@ export const getOneProduct = async id => {
   }
 };
 
-export const creatProduct = async form => {
+export const createProduct = async form => {
   try {
     const res = await api.post('/products', form);
     return res.data;
@@ -29,7 +29,7 @@ export const creatProduct = async form => {
 
 export const updateProduct = async (id, form) => {
   try {
-    const res = await api.put(`/products/${id}`, form);
+    const res = await api.put(`/products/${id}/edit`, form);
     return res.data;
   } catch (error) {
     throw error;
