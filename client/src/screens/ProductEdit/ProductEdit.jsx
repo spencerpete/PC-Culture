@@ -14,6 +14,7 @@ const ProductEdit = () => {
       setProduct(product);
     };
     fetchProduct();
+    // eslint-disable-next-line
   }, []);
 
   function handleChange(e) {

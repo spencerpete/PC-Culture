@@ -9,13 +9,13 @@ const SideNav = ({ user, toggleShow }) => {
           <h2 className="sidenav-brand">PC Culture</h2>
         </div>
         <Link path="/products">All Parts</Link>
-        <Link path="/products/new">All Parts</Link>
+        <Link path="/products/new">Create Part</Link>
         {user ? (
           <Link path="/sign-out">Sign Out</Link>
         ) : (
           <>
-            <Link path="/sign-in">All Parts</Link>
-            <Link path="/sign-up">All Parts</Link>
+            <Link path="/sign-in">Sign In</Link>
+            <Link path="/sign-up">Sign Up</Link>
           </>
         )}
       </div>
