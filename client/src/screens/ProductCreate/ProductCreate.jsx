@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { ProductForm, Button } from '../../components';
+import { Layout, ProductForm, Button } from '../../components';
 import { createProduct } from '../../services/products';
 
 const ProductCreate = () => {

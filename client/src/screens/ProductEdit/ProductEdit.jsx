@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getOneProduct, updateProduct, deleteProduct } from '../../services/products';
-import { ProductForm, Button } from '../../components';
+import { Layout, ProductForm, Button } from '../../components';
 
 const ProductEdit = () => {
   const [product, setProduct] = useState({});
