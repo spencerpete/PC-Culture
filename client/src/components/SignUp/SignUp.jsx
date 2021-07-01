@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { signUp } from '../../services/users';
 import { FaUserAlt, FaLock } from 'react-icons/fa';
 import { SiMailDotRu } from 'react-icons/si';
+import { Button } from '../index';
 import './SignUp.css';
 
 export default function SignUp(props) {
@@ -46,7 +47,7 @@ export default function SignUp(props) {
     if (form.isError) {
       return <div>{form.errorMsg}</div>;
     } else {
-      return <button>Sign Up</button>;
+      return <Button text={'Sign Up'} />;
     }
   };
   return (
@@ -57,6 +58,7 @@ export default function SignUp(props) {
             <SiMailDotRu />
           </div>
           <input
+            className="input-tag"
             required
             type="text"
             name="email"

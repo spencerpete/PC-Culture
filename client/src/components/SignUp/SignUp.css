@@ -2,11 +2,11 @@ form{
   @apply flex flex-col justify-center;
 }
 .input{
-  @apply border-b w-10/12 m-auto flex ;
+  @apply border-b w-10/12 m-auto space-y-20 flex focus:outline-none focus:ring-opacity-50;
 }
 .icon{
-  @apply mr-3 opacity-50 flex;
+  @apply mx-3 mb-0 opacity-50 flex;
 }
 svg{
-  @apply self-center;
+  @apply  self-end mb-1;
 }

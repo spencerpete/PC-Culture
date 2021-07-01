@@ -7,6 +7,7 @@ import ProductEdit from './screens/ProductEdit/ProductEdit';
 import Home from './screens/Home/Home';
 import SignUpIn from './screens/SignUp-In/SignUp-In';
 import ProductDetail from './screens/ProductDetail/ProductDetail';
+import './App.css';
 
 const App = () => {
   const [user, setUser] = useState(null);

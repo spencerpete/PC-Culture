@@ -4,7 +4,7 @@ import './SignIn.css';
 import { signIn } from '../../services/users';
 import { FaLock } from 'react-icons/fa';
 import { SiMailDotRu } from 'react-icons/si';
-
+import { Button } from '../index';
 const SignIn = props => {
   const [form, setForm] = useState({
     email: '',
@@ -44,7 +44,7 @@ const SignIn = props => {
     if (form.isError) {
       return <div>{form.errorMsg}</div>;
     } else {
-      return <button>Sign In</button>;
+      return <Button text={'Sign In'} />;
     }
   };
   return (

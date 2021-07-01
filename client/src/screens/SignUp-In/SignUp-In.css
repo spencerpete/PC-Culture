@@ -1,0 +1,3 @@
+.UserFormTitle{
+  @apply text-2xl mt-10 flex justify-center;
+}

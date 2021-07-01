@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import SignIn from '../../components/SignIn/SignIn';
 import SignUp from '../../components/SignUp/SignUp';
+import './SignUp-In.css';
 
 const SignUpIn = props => {
   const { setUser } = props;
@@ -26,7 +27,7 @@ const SignUpIn = props => {
   return (
     <Layout>
       <div className=".shadow border rounded flex flex-col justify-center w-11/12 m-auto">
-        <div className="UserFormTitle flex justify-center">
+        <div className="UserFormTitle">
           <div
             onClick={() => (
               setUserAction('sign-up'), setSignInClass('opacity-50'), setSignUpClass('')
