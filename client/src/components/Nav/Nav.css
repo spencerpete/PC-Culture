@@ -1,0 +1,14 @@
+.nav{
+  @apply bg-blue-400 flex;
+}
+nav{
+  @apply flex w-full text-2xl text-white m-2;
+}
+
+.landing-link{
+  @apply place-self-center m-auto;
+}
+
+.menu{
+  @apply text-3xl;
+}

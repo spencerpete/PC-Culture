@@ -7,6 +7,7 @@ import ProductEdit from './screens/ProductEdit/ProductEdit';
 import Home from './screens/Home/Home';
 import SignUpIn from './screens/SignUp-In/SignUp-In';
 import ProductDetail from './screens/ProductDetail/ProductDetail';
+import './App.css';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -29,13 +30,13 @@ const App = () => {
           <ProductList user={user} />
         </Route>
         <Route exact path="/products/new">
-          {user ? <ProductCreate /> : <Redirect to="/sign-up"/>}
+          {user ? <ProductCreate /> : <Redirect to="/sign-up" />}
         </Route>
         <Route exact path="/products/:id">
           <ProductDetail />
         </Route>
         <Route exact path="/products/:id/edit">
-          {user ? <ProductEdit /> : <Redirect to="/sign-up"/>}
+          {user ? <ProductEdit /> : <Redirect to="/sign-up" />}
         </Route>
         <Route path="/sign-up">
           <SignUpIn setUser={setUser} />

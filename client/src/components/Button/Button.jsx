@@ -1,9 +1,13 @@
-
-const Button = ({text, onClick}) => {
-  return <button onClick={onClick}>{text}</button>
-}
+import './Button.css';
+const Button = ({ text, onClick }) => {
+  return (
+    <button className="button" onClick={onClick}>
+      {text}
+    </button>
+  );
+};
 
 Button.defaultProps = {
-  onClick: null
-}
-export default Button
+  onClick: null,
+};
+export default Button;
