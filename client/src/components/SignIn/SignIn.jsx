@@ -52,7 +52,7 @@ const SignIn = props => {
       <form className="form" onSubmit={onSignIn}>
         <div className="input">
           <div className="icon">
-            <FaLock />
+            <SiMailDotRu />
           </div>
           <input
             required

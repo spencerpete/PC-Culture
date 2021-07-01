@@ -6,6 +6,8 @@ import SignUp from '../../components/SignUp/SignUp';
 const SignUpIn = props => {
   const { setUser } = props;
   const [userAction, setUserAction] = useState('sign-up');
+  const [signUpClass, setSignUpClass] = useState('');
+  const [signInClass, setSignInClass] = useState('opacity-50');
 
   const SignInForm = () => {
     return (
@@ -23,11 +25,25 @@ const SignUpIn = props => {
   };
   return (
     <Layout>
-      <div className=".shadow border rounded flex flex-col justify-center w-11/12 ">
+      <div className=".shadow border rounded flex flex-col justify-center w-11/12 m-auto">
         <div className="UserFormTitle flex justify-center">
-          <div onClick={() => setUserAction('sign-up')}>Sign Up</div>
+          <div
+            onClick={() => (
+              setUserAction('sign-up'), setSignInClass('opacity-50'), setSignUpClass('')
+            )}
+            className={signUpClass}
+          >
+            Sign Up
+          </div>
           <div>/</div>
-          <div onClick={() => setUserAction('sign-in')}>Sign In</div>
+          <div
+            onClick={() => (
+              setUserAction('sign-in'), setSignUpClass('opacity-50'), setSignInClass('')
+            )}
+            className={signInClass}
+          >
+            Sign In
+          </div>
         </div>
         {userAction === 'sign-in' ? SignInForm() : SignUpForm()}
       </div>
