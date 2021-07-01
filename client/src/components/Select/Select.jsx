@@ -1,8 +1,8 @@
-import React from 'react';
+import './Select.css'
 
 const Select = ({ onChange, value }) => {
   return (
-      <select value={value} name="category" onChange={onChange}>
+      <select className="select" value={value} name="category" onChange={onChange}>
         <option value="category" disabled >Category</option>
         <option value="cpu">CPU</option>
         <option value="ram">RAM</option>

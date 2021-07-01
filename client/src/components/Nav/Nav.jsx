@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import SideNav from '../SideNav/SideNav';
+import {SideNav, SideSortFilter} from '../index';
 import './Nav.css';
 export default function Nav() {
   const [show, setShow] = useState(false);
@@ -13,6 +13,7 @@ export default function Nav() {
       <nav>
         <FiMenu onClick={toggleShow} />
         <SideNav toggleShow={toggleShow} show={show}/>
+        <SideSortFilter />
         <Link className="landing-link" to="/">
           PC Culture
         </Link>

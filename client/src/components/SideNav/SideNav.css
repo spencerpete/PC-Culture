@@ -1,9 +1,9 @@
 .sidenav-container {
-  @apply bg-black bg-opacity-50 fixed w-full h-full transform -translate-x-full transition duration-300
+  @apply bg-black bg-opacity-50 fixed w-full h-screen transform -translate-x-full transition duration-300
 }
 
 .sidenav {
-  @apply flex flex-col w-2/4 fixed h-full bg-white transform -translate-x-full transition duration-300
+  @apply flex flex-col w-2/4 fixed h-screen bg-white transform -translate-x-full transition duration-300
 }
 
 .sidenav-header {

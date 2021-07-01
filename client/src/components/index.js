@@ -6,6 +6,8 @@ import ProductCard from './ProductCard/ProductCard';
 import ProductForm from './ProductForm/ProductForm';
 import Search from './Search/Search';
 import Select from './Select/Select';
+import SideNav from './SideNav/SideNav';
+import SideSortFilter from './SideSortFilter/SideSortFilter';
 import SignIn from './SignIn/SignIn';
 import SignUp from './SignUp/SignUp';
 import Sort from './Sort/Sort';
@@ -18,6 +20,8 @@ export {
   ProductForm,
   Search,
   Select,
+  SideNav,
+  SideSortFilter,
   SignIn,
   SignUp,
   Sort,

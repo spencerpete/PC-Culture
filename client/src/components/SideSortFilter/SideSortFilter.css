@@ -1,0 +1,11 @@
+.sidesort {
+  @apply  fixed flex flex-col items-center bg-white w-full h-screen 
+}
+
+.menu-heading {
+  @apply text-black font-semibold my-14
+}
+
+.sort-close {
+  @apply text-black absolute left-3 top-3
+}
