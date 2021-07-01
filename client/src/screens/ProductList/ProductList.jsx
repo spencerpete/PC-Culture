@@ -53,7 +53,9 @@ const ProductList = props => {
   const handleSubmit = event => event.preventDefault();
 
   const handleSearch = event => {
-    const results = products.filter(product => product.name(event.target.value));
+    const results = products.filter(product =>
+      product.name.toLowerCase().includes(event.target.value.toLowerCase())
+    );
     setSearchResult(results);
     setApplySort(true);
   };

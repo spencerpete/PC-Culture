@@ -31,7 +31,7 @@ const Carousel = () => {
       {images.map((image, index) => {
         return (
           <div className={index === caroImg ? 'image active' : 'image'}>
-            {index === caroImg && <img src={image.image} alt="PC Image" className="image" />}
+            {index === caroImg && <img src={image.image} alt="Computer" className="image" />}
           </div>
         );
       })}

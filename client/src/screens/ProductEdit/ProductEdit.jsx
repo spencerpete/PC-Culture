@@ -14,6 +14,7 @@ const ProductEdit = () => {
       setProduct(product);
     };
     fetchProduct();
+    // eslint-disable-next-line
   }, []);
 
   function handleChange(e) {
@@ -23,12 +24,12 @@ const ProductEdit = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const upDatedProduct = await updateProduct(id, product);
+    await updateProduct(id, product);
     history.push(`/products/${id}`);
   }
 
   async function handleDelete() {
-    const deleted = await deleteProduct(id);
+    await deleteProduct(id);
   }
 
   return (
