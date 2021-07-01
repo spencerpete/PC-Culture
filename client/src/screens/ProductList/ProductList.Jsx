@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
 import { Layout, Product, Search, Sort } from '../../components';
-import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort';
+import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/Sort';
 
 const ProductList = props => {
   const [products, setProducts] = useState([]);

@@ -23,8 +23,8 @@ const SignUpIn = props => {
   };
   return (
     <Layout>
-      <div className="sign-up/in-page">
-        <div className="UserFormTitle">
+      <div className=".shadow border rounded flex flex-col justify-center w-11/12 ">
+        <div className="UserFormTitle flex justify-center">
           <div onClick={() => setUserAction('sign-up')}>Sign Up</div>
           <div>/</div>
           <div onClick={() => setUserAction('sign-in')}>Sign In</div>
