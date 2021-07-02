@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import SideNav from '../SideNav/SideNav';
-export default function Nav() {
-  const [clicked, setClicked] = useState(false);
-  const handleMenu = () => {
-    setClicked(prev => !prev);
-  };
+import './Nav.css';
+
+export default function Nav({ user, toggleShow }) {
   return (
-    <div className="nav">
-      <nav>
-        <FiMenu onClick={handleMenu} />
-        {clicked ? <SideNav /> : ''}
-        <Link to="/">PC-Culture</Link>
-      </nav>
+    <div className="navbar-container">
+      <div className="navbar">
+        <ul className="navbar-nav">
+          <FiMenu onClick={toggleShow} className="navbar-dropdown" />
+          <Link to="/products" className="nav-link">All Parts</Link>
+          {user ? <Link to="/products/new" className="nav-link">Add Part</Link> : ''}
+        </ul>
+        <div className="brand-container">
+          <Link className="brand" to="/">PC Culture</Link>
+        </div>
+        <ul className="navbar-auth">
+          {user ? (
+            <Link to="/sign-up" className="nav-link">Sign Out</Link>
+          ) : (
+            <>
+              <Link to="/sign-up" className="nav-link">Sign Up</Link>
+              <Link to="/sign-up" className="nav-link">Sign In</Link>
+            </>
+          )}
+        </ul>
+      </div>
     </div>
   );
 }

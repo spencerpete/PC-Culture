@@ -1,0 +1,16 @@
+.sign-in-input{
+  @apply flex flex-col justify-center;
+}
+.input{
+  @apply border-b w-10/12 m-auto flex ;
+}
+.icon{
+  @apply mr-3 opacity-50 flex;
+}
+svg{
+  @apply self-center;
+}
+
+.usererror{
+  @apply m-auto opacity-50;
+}

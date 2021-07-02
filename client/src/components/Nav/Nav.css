@@ -1,0 +1,28 @@
+.navbar {
+  @apply bg-blue-400 flex h-12;
+}
+
+.navbar-nav {
+  @apply flex items-center w-1/4
+}
+
+.navbar-dropdown {
+  @apply md:hidden self-center ml-2 mb-0 text-white text-3xl
+}
+
+.nav-link {
+  @apply hidden md:block text-white px-4
+}
+
+.brand-container {
+  @apply text-white flex items-center justify-center w-2/4
+}
+
+.navbar-auth {
+  @apply flex justify-end items-center w-1/4
+}
+
+.brand {
+  @apply text-2xl font-semibold
+}
+

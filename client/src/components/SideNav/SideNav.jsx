@@ -1,23 +1,27 @@
 import { Link } from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa';
+import './SideNav.css'
 
-const SideNav = ({ user, toggleShow }) => {
+const SideNav = ({ user, show, toggleShow }) => {
   return (
-    <div className="sidenav-container">
-      <div className="side-nav">
-        <div className="sidenav-header">
-          {/* icon */}
+    <div className={show ? "sidenav-container show" : "sidenav-container"}>
+      <div className={show ? "sidenav show" : "sidenav"}>
+        <div className=" sidenav-header">
+          <FaTimes className="close" onClick={toggleShow}/>
           <h2 className="sidenav-brand">PC Culture</h2>
         </div>
-        <Link path="/products">All Parts</Link>
-        <Link path="/products/new">Create Part</Link>
-        {user ? (
-          <Link path="/sign-out">Sign Out</Link>
-        ) : (
-          <>
-            <Link path="/sign-in">Sign In</Link>
-            <Link path="/sign-up">Sign Up</Link>
-          </>
-        )}
+        <div className="sidenav-links">
+          <Link className="sidenav-link" to="/products">All Parts</Link>
+          <Link className="sidenav-link" to="/products/new">Create Part</Link>
+          {user ? (
+            <Link className="sidenav-link" to="/sign-out">Sign Out</Link>
+          ) : (
+            <>
+              <Link className="sidenav-link" to="/sign-up">Sign In</Link>
+              <Link className="sidenav-link" to="/sign-up">Sign Up</Link>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

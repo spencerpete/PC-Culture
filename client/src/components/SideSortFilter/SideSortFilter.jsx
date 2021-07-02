@@ -1,9 +1,15 @@
-import React from 'react'
+import { Button, Filter, Sort } from '../index'
+import { FaTimes } from 'react-icons/fa';
+import './SideSortFilter.css'
 
-const SideSortFilter = () => {
+const SideSortFilter = ({show, handleFilter, handleSort, handleSubmit, toggleShow}) => {
   return (
-    <div>
-      
+    <div className={show ? "sidesort show" : "sidesort"}>
+      <FaTimes className="sort-close" onClick={toggleShow}/>
+      <h2 className="menu-heading">Sort/Filter</h2>
+      <Filter handleFilter={handleFilter}/>
+      <Sort onSubmit={handleSubmit} handleSort={handleSort}/>
+      <Button text="Apply" onClick={toggleShow}/>
     </div>
   )
 }

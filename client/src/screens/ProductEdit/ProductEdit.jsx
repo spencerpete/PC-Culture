@@ -25,7 +25,7 @@ const ProductEdit = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     await updateProduct(id, product);
-    history.push(`/products/${id}`);
+    history.push(`/products`);
   }
 
   async function handleDelete() {
@@ -38,8 +38,10 @@ const ProductEdit = () => {
         <h2 className="form-heading">Edit Product</h2>
         <form onSubmit={handleSubmit}>
           <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
-          <Button text="Update" />
-          <Button text="Delete" onClick={handleDelete} />
+          <div className="flex">
+            <Button text="Update" />
+            <Button text="Delete" onClick={handleDelete} />
+          </div>
         </form>
       </div>
     </Layout>

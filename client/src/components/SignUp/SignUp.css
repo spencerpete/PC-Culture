@@ -1,0 +1,12 @@
+form{
+  @apply flex flex-col justify-center;
+}
+.input{
+  @apply border-b w-10/12 m-auto space-y-20 flex;
+}
+.icon{
+  @apply mx-3 mb-0 opacity-50 flex;
+}
+svg{
+  @apply  self-end mb-1;
+}

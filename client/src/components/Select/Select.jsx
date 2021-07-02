@@ -1,17 +1,19 @@
-import React from 'react';
+import './Select.css';
 
-const Select = ({ onChange, value }) => {
+const Select = ({ onChange, value, className }) => {
   return (
-      <select value={value} name="category" onChange={onChange}>
-        <option value="category" disabled >Category</option>
-        <option value="cpu">CPU</option>
-        <option value="ram">RAM</option>
-        <option value="motherboard">Motherboard</option>
-        <option value="gpu">GPU</option>
-        <option value="storage">Storage</option>
-        <option value="case">Case</option>
-        <option value="power supply">Power Supply</option>
-      </select>
+    <select className={className} id="select" value={value} name="category" onChange={onChange}>
+      <option value="category" disabled>
+        Category
+      </option>
+      <option value="cpu">CPU</option>
+      <option value="ram">RAM</option>
+      <option value="motherboard">Motherboard</option>
+      <option value="gpu">GPU</option>
+      <option value="storage">Storage</option>
+      <option value="case">Case</option>
+      <option value="power supply">Power Supply</option>
+    </select>
   );
 };
 

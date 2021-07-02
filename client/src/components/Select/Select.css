@@ -1,0 +1,6 @@
+.select {
+  @apply p-2 text-black text-base bg-white border rounded-md
+}
+.product-form-select{
+  @apply w-full flex focus:outline-none bg-white opacity-50;
+}
