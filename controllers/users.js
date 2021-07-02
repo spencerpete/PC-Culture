@@ -43,9 +43,8 @@ export const signIn = async (req, res) => {
       const payload = {
         id: user._id,
         username: user.username,
-        exp: parseInt(exp.getDate() / 1000),
+        exp: parseInt(exp.getTime() / 1000),
       };
-
       const token = jwt.sign(payload, TOKEN_KEY);
       res.status(201).json({ token });
     } else {
