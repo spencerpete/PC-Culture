@@ -25,7 +25,7 @@ const ProductEdit = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     await updateProduct(id, product);
-    history.push(`/products/${id}`);
+    history.push(`/products`);
   }
 
   async function handleDelete() {
