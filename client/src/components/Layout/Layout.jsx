@@ -1,13 +1,20 @@
-import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
+import { useState } from 'react';
+import { Nav, Footer, SideNav } from '../index';
 import './Layout.css';
 
-const Layout = props => (
-  <div className="layout">
-    <Nav />
-    <div className="layout-children">{props.children}</div>
-    <Footer />
-  </div>
-);
+const Layout = props => {
+  const [show, setShow] = useState(false);
+  const toggleShow = () => {
+    setShow(prev => !prev);
+  };
+  return (
+    <div className="layout">
+      <SideNav toggleShow={toggleShow} show={show} />
+      <Nav toggleShow={toggleShow} />
+      <div className="layout-children">{props.children}</div>
+      <Footer />
+    </div>
+  );
+};
 
 export default Layout;

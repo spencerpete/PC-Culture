@@ -1,6 +1,8 @@
 import Button from './Button/Button';
 import Filter from './Filter/Filter';
+import Footer from './Footer/Footer'
 import Layout from './Layout/Layout';
+import Nav from './Nav/Nav'
 import Product from './Product/product';
 import ProductCard from './ProductCard/ProductCard';
 import ProductForm from './ProductForm/ProductForm';
@@ -14,7 +16,9 @@ import Sort from './Sort/Sort';
 export {
   Button,
   Filter,
+  Footer,
   Layout,
+  Nav,
   Product,
   ProductCard,
   ProductForm,

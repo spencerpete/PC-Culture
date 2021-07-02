@@ -1,5 +1,5 @@
 .sidesort {
-  @apply  fixed flex flex-col items-center bg-white w-full h-screen 
+  @apply  fixed flex flex-col items-center bg-white w-full h-screen transform translate-x-full transition duration-300
 }
 
 .menu-heading {
@@ -8,4 +8,8 @@
 
 .sort-close {
   @apply text-black absolute left-3 top-3
+}
+
+.show {
+  @apply transform translate-x-0
 }
