@@ -3,7 +3,7 @@
 }
 
 .menu-heading {
-  @apply text-black font-semibold my-14
+  @apply text-black font-semibold text-2xl my-14
 }
 
 .sort-close {
