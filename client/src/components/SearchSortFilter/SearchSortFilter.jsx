@@ -1,4 +1,4 @@
-import { Search, Sort, Filter, Button } from '../index';
+import { Search, Sort, Filter, SideSortBtn } from '../index';
 import './SearchSortFilter.css';
 
 const SearchSortFilter = ({ handleSubmit, handleSearch, handleFilter, handleSort, toggleShow }) => {
@@ -7,7 +7,7 @@ const SearchSortFilter = ({ handleSubmit, handleSearch, handleFilter, handleSort
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Filter handleFilter={handleFilter} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      {/* <Button text="SideFilter" onClick={toggleShow} /> */}
+      <SideSortBtn onClick={toggleShow}/>
     </div>
   );
 };

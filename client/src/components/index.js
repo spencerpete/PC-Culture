@@ -10,6 +10,7 @@ import Search from './Search/Search';
 import SearchSortFilter from './SearchSortFilter/SearchSortFilter';
 import Select from './Select/Select';
 import SideNav from './SideNav/SideNav';
+import SideSortBtn from './SideSortBtn/SideSortBtn';
 import SideSortFilter from './SideSortFilter/SideSortFilter';
 import SignIn from './SignIn/SignIn';
 import SignUp from './SignUp/SignUp';
@@ -27,6 +28,7 @@ export {
   SearchSortFilter,
   Select,
   SideNav,
+  SideSortBtn,
   SideSortFilter,
   SignIn,
   SignUp,

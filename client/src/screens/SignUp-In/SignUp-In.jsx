@@ -25,7 +25,7 @@ const SignUpIn = props => {
     );
   };
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className=".shadow border rounded flex flex-col justify-center w-11/12 m-auto">
         <div className="UserFormTitle">
           <div

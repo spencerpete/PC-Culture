@@ -1,0 +1,7 @@
+.sidesort-btn {
+  @apply  md:hidden bg-blue-400 text-white transform rotate-90 p-2 rounded-md
+}
+
+.sort-icon {
+  @apply m-0 text-2xl
+}
