@@ -30,7 +30,7 @@ export default function SignUp(props) {
     try {
       const user = await signUp(form);
       setUser(user);
-      history.goBack();
+      history.push('/');
     } catch (error) {
       console.error(error);
       setForm({

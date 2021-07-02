@@ -28,7 +28,7 @@ const SignIn = props => {
     try {
       const user = await signIn(form);
       setUser(user);
-      history.goBack();
+      history.push('/products');
     } catch (error) {
       console.error(error);
       setForm({

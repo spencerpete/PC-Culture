@@ -1,13 +1,8 @@
-import React from 'react';
+import './Select.css';
 
-const Select = ({ onChange, value }) => {
+const Select = ({ onChange, value, className }) => {
   return (
-    <select
-      className="w-full flex focus:outline-none bg-white opacity-50"
-      value={value}
-      name="category"
-      onChange={onChange}
-    >
+    <select className={className} id="select" value={value} name="category" onChange={onChange}>
       <option value="category" disabled>
         Category
       </option>

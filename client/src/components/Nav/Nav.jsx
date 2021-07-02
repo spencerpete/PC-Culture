@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import SideNav from '../SideNav/SideNav';
 import './Nav.css';
-export default function Nav() {
-  const [show, setShow] = useState(false);
-  const toggleShow = () => {
-    setShow(prev => !prev);
-  };
+
+export default function Nav({ user, toggleShow }) {
   return (
-    <div className="nav">
-      <nav>
-        <FiMenu onClick={toggleShow} />
-        <SideNav toggleShow={toggleShow} show={show}/>
-        <Link className="landing-link" to="/">
-          PC Culture
-        </Link>
-      </nav>
+    <div className="navbar-container">
+      <div className="navbar">
+        <ul className="navbar-nav">
+          <FiMenu onClick={toggleShow} className="navbar-dropdown" />
+          <Link to="/products" className="nav-link">All Parts</Link>
+        </ul>
+        <div className="brand-container">
+          <Link className="brand" to="/">PC Culture</Link>
+        </div>
+        <ul className="navbar-auth">
+          {user ? (
+            <Link to="/sign-up" className="nav-link">Sign Out</Link>
+          ) : (
+            <>
+              <Link to="/sign-up" className="nav-link">Sign Up</Link>
+              <Link to="/sign-up" className="nav-link">Sign In</Link>
+            </>
+          )}
+        </ul>
+      </div>
     </div>
   );
 }

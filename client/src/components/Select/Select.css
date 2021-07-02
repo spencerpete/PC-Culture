@@ -1,0 +1,3 @@
+.select {
+  @apply p-2 text-black text-base bg-white border rounded-md
+}

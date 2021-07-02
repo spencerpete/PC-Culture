@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
-import { Layout, Product, Search, Filter, Sort } from '../../components';
+import { Layout, Product, SearchSortFilter, SideSortFilter } from '../../components';
 import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/Sort';
 
 const ProductList = props => {
@@ -8,6 +8,7 @@ const ProductList = props => {
   const [searchResult, setSearchResult] = useState([]);
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState('name-ascending');
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -17,6 +18,11 @@ const ProductList = props => {
     };
     fetchProducts();
   }, []);
+
+  // Control side sort/filter menu
+  const toggleShow = () => {
+    setShow(prev => !prev);
+  };
 
   const handleSort = type => {
     if (type !== '' && type !== undefined) {
@@ -61,11 +67,16 @@ const ProductList = props => {
   };
 
   return (
-    <Layout user={props.user}>
-      <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Filter handleFilter={handleFilter} />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div>
+    <>
+      <SideSortFilter show={show} toggleShow={toggleShow} />
+      <Layout user={props.user}>
+        <SearchSortFilter
+          handleSubmit={handleSubmit}
+          handleSearch={handleSearch}
+          handleSort={handleSort}
+          handleFilter={handleFilter}
+          toggleShow={toggleShow}
+        />
         <div>
           {searchResult.map((product, index) => {
             return (
@@ -79,8 +90,8 @@ const ProductList = props => {
             );
           })}
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 export default ProductList;

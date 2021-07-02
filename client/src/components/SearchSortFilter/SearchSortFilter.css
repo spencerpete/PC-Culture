@@ -1,0 +1,3 @@
+.results-control {
+  @apply flex justify-around
+}
