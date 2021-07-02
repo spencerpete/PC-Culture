@@ -9,8 +9,8 @@ const Layout = props => {
   };
   return (
     <div className="layout">
-      <SideNav toggleShow={toggleShow} show={show} />
-      <Nav toggleShow={toggleShow} />
+      <SideNav toggleShow={toggleShow} show={show} user={props.user}/>
+      <Nav toggleShow={toggleShow} user={props.user}/>
       <div className="layout-children">{props.children}</div>
       <Footer />
     </div>
