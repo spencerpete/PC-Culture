@@ -31,8 +31,7 @@ const App = () => {
           <ProductList user={user} />
         </Route>
         <Route exact path="/products/new">
-          <ProductCreate />
-          {/* {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />} */}
+          {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />}
         </Route>
         <Route exact path="/products/:id">
           <ProductDetail user={user} />

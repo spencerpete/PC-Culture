@@ -40,7 +40,7 @@ const CategoryCard = () => {
     <div className="category-cards-container">
       {categories.map((category, index) => {
         return (
-          <Link to="/products" className="categoryCard-shell shadow-lg">
+          <Link key={index} to="/products" className="categoryCard-shell shadow-lg">
             <div className="categoryCard-img-shell">
               <img src={category.imgURL} alt={category.name} />
             </div>
