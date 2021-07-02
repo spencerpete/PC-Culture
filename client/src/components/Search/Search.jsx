@@ -2,7 +2,7 @@ import './Search.css'
 
 const Search = props => {
   return (
-    <form className="form" onSubmit={e => props.onSubmit(e)}>
+    <form onSubmit={e => props.onSubmit(e)}>
       <input
         className="search"
         value={props.value}

@@ -4,7 +4,7 @@ import { Layout, ProductForm, Button } from '../../components';
 import { createProduct } from '../../services/products';
 import './ProductCreate.css';
 
-const ProductCreate = () => {
+const ProductCreate = ({user}) => {
   const [product, setProduct] = useState({
     name: '',
     price: '',
@@ -27,7 +27,7 @@ const ProductCreate = () => {
     history.push('/products');
   }
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="form .shadow">
         <div className="form-heading">Add Product</div>
         <form onSubmit={handleSubmit}>

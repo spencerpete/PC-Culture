@@ -7,7 +7,7 @@
 }
 
 .navbar-dropdown {
-  @apply md:hidden self-center ml-2 text-white text-3xl
+  @apply md:hidden self-center ml-2 mb-0 text-white text-3xl
 }
 
 .nav-link {
@@ -22,14 +22,7 @@
   @apply flex justify-end items-center w-1/4
 }
 
-nav {
-  @apply flex w-full text-2xl m-2;
-}
-
 .brand {
   @apply text-2xl font-semibold
 }
 
-.menu {
-  @apply text-3xl;
-}

@@ -1,13 +1,13 @@
-import { Search, Sort, Filter, Button } from '../index';
+import { Search, Sort, Filter, SideSortBtn } from '../index';
 import './SearchSortFilter.css';
 
 const SearchSortFilter = ({ handleSubmit, handleSearch, handleFilter, handleSort, toggleShow }) => {
   return (
     <div className="results-control">
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Filter handleFilter={handleFilter} />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      {/* <Button text="SideFilter" onClick={toggleShow} /> */}
+      <Filter handleFilter={handleFilter} className="form-group"/>
+      <Sort onSubmit={handleSubmit} handleSort={handleSort} className="form-group"/>
+      <SideSortBtn onClick={toggleShow}/>
     </div>
   );
 };

@@ -9,6 +9,7 @@ export default function Nav({ user, toggleShow }) {
         <ul className="navbar-nav">
           <FiMenu onClick={toggleShow} className="navbar-dropdown" />
           <Link to="/products" className="nav-link">All Parts</Link>
+          {user ? <Link to="/products/new" className="nav-link">Add Part</Link> : ''}
         </ul>
         <div className="brand-container">
           <Link className="brand" to="/">PC Culture</Link>
