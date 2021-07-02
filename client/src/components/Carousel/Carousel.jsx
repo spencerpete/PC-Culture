@@ -32,7 +32,7 @@ const Carousel = () => {
       <IoIosArrowForward className="right-arrow" onClick={nextSlide} />
       {images.map((image, index) => {
         return (
-          <div className={index === caroImg ? 'image active' : 'image'}>
+          <div key={index} className={index === caroImg ? 'image active' : 'image'}>
             {index === caroImg && (
               <img src={image.image} alt="Computer" className="image carousel-image" />
             )}

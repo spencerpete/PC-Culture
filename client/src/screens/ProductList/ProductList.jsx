@@ -62,6 +62,7 @@ const ProductList = props => {
     const results = products.filter(product =>
       product.name.toLowerCase().includes(event.target.value.toLowerCase())
     );
+    console.log(results);
     setSearchResult(results);
     setApplySort(true);
   };

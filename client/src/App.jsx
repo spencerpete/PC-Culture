@@ -7,7 +7,6 @@ import ProductEdit from './screens/ProductEdit/ProductEdit';
 import Home from './screens/Home/Home';
 import SignUpIn from './screens/SignUp-In/SignUp-In';
 import ProductDetail from './screens/ProductDetail/ProductDetail';
-import SignOut from './screens/SignOut/SignOut';
 import './App.css';
 
 const App = () => {
@@ -31,8 +30,7 @@ const App = () => {
           <ProductList user={user} />
         </Route>
         <Route exact path="/products/new">
-          <ProductCreate />
-          {/* {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />} */}
+          {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />}
         </Route>
         <Route exact path="/products/:id">
           <ProductDetail user={user} />
@@ -42,9 +40,6 @@ const App = () => {
         </Route>
         <Route path="/sign-up">
           <SignUpIn setUser={setUser} />
-        </Route>
-        <Route path="/sign-out">
-          <SignOut setUser={setUser} />
         </Route>
       </Switch>
     </div>

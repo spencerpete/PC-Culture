@@ -2,7 +2,7 @@
   @apply flex flex-wrap justify-center;
 }
 .categoryCard-shell{
-  @apply w-5/12 md:w-3/12 overflow-hidden shadow-lg flex flex-col  content-center rounded my-6 mx-1 ;
+  @apply w-5/12 md:w-3/12 overflow-hidden shadow-lg flex flex-col  content-center rounded my-6 mx-1 justify-between;
 }
 
 .categoryCard-info-shell{
