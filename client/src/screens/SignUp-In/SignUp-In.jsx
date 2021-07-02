@@ -26,7 +26,7 @@ const SignUpIn = props => {
   };
   return (
     <Layout>
-      <div className=".shadow border rounded flex flex-col justify-center w-11/12 m-auto">
+      <div className=".shadow border rounded flex flex-col justify-center w-11/12 md:w-9/12 lg:w-6/12 m-auto">
         <div className="UserFormTitle">
           <div
             onClick={() => (
