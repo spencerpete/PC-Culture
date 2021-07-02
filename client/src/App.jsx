@@ -41,6 +41,9 @@ const App = () => {
         <Route path="/sign-up">
           <SignUpIn setUser={setUser} />
         </Route>
+        <Route>
+          <SignOut setUser={setUser} />
+        </Route>
       </Switch>
     </div>
   );
