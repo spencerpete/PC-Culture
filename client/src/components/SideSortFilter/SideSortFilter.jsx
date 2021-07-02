@@ -1,4 +1,4 @@
-import { Filter, Sort } from '../index'
+import { Button, Filter, Sort } from '../index'
 import { FaTimes } from 'react-icons/fa';
 import './SideSortFilter.css'
 
@@ -9,6 +9,7 @@ const SideSortFilter = ({show, toggleShow}) => {
       <h2 className="menu-heading">Sort/Filter</h2>
       <Filter />
       <Sort />
+      <Button text="Apply" onClick={toggleShow}/>
     </div>
   )
 }
