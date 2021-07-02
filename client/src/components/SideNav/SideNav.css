@@ -1,5 +1,5 @@
 .sidenav-container {
-  @apply bg-black bg-opacity-50 fixed w-full h-screen transform -translate-x-full transition duration-300
+  @apply bg-black bg-opacity-50 fixed w-full h-screen z-50 transform -translate-x-full transition duration-300
 }
 
 .sidenav {

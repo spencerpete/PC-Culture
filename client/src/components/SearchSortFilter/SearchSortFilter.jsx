@@ -5,8 +5,8 @@ const SearchSortFilter = ({ handleSubmit, handleSearch, handleFilter, handleSort
   return (
     <div className="results-control">
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Filter handleFilter={handleFilter} />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
+      <Filter handleFilter={handleFilter} className="form-group"/>
+      <Sort onSubmit={handleSubmit} handleSort={handleSort} className="form-group"/>
       <SideSortBtn onClick={toggleShow}/>
     </div>
   );
