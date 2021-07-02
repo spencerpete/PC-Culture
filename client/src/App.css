@@ -5,5 +5,5 @@ form{
   @apply flex flex-col justify-center;
 }
 .form{
-  @apply  border rounded flex flex-col justify-center w-11/12 m-auto;
+  @apply  border rounded flex flex-col justify-center w-11/12  m-auto;
 }

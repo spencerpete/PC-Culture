@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import './Carousel.css';
+
 const Carousel = () => {
   const images = [
     {
@@ -26,12 +28,14 @@ const Carousel = () => {
   };
   return (
     <div className="carousel">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <IoIosArrowBack className="left-arrow" onClick={prevSlide} />
+      <IoIosArrowForward className="right-arrow" onClick={nextSlide} />
       {images.map((image, index) => {
         return (
           <div className={index === caroImg ? 'image active' : 'image'}>
-            {index === caroImg && <img src={image.image} alt="Computer" className="image" />}
+            {index === caroImg && (
+              <img src={image.image} alt="Computer" className="image carousel-image" />
+            )}
           </div>
         );
       })}
