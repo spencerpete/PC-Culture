@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Product = props => {
   return (
-    <div className="p-10 ">
+    <div className="p-10">
       <div className="max-w-sm rounded overflow-hidden shadow-lg flex flex-wrap content-center">
         <Link to={`/products/${props._id}`}>
           <div className="">

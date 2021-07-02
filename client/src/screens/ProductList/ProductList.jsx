@@ -77,7 +77,7 @@ const ProductList = props => {
           handleFilter={handleFilter}
           toggleShow={toggleShow}
         />
-        <div>
+        <div className="mt-5 grid grid-cols-2">
           {searchResult.map((product, index) => {
             return (
               <Product

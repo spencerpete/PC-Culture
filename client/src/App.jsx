@@ -7,6 +7,7 @@ import ProductEdit from './screens/ProductEdit/ProductEdit';
 import Home from './screens/Home/Home';
 import SignUpIn from './screens/SignUp-In/SignUp-In';
 import ProductDetail from './screens/ProductDetail/ProductDetail';
+import SignOut from './screens/SignOut/SignOut';
 import './App.css';
 
 const App = () => {
@@ -40,6 +41,9 @@ const App = () => {
         </Route>
         <Route path="/sign-up">
           <SignUpIn setUser={setUser} />
+        </Route>
+        <Route path="/sign-out">
+          <SignOut setUser={setUser} />
         </Route>
       </Switch>
     </div>
