@@ -69,7 +69,13 @@ const ProductList = props => {
 
   return (
     <>
-      <SideSortFilter show={show} toggleShow={toggleShow} />
+      <SideSortFilter
+        handleSort={handleSort}
+        handleSubmit={handleSubmit}
+        handleFilter={handleFilter}
+        show={show}
+        toggleShow={toggleShow}
+      />
       <Layout user={props.user}>
         <SearchSortFilter
           handleSubmit={handleSubmit}
