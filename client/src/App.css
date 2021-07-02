@@ -7,3 +7,7 @@ form{
 .form{
   @apply  border rounded flex flex-col justify-center w-11/12  m-auto;
 }
+
+body {
+  @apply bg-gray-50
+}
