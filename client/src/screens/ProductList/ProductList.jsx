@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
-import { Button, Layout, Product, SearchSortFilter, SideSortFilter } from '../../components';
+import { Layout, Product, SearchSortFilter, SideSortFilter } from '../../components';
 import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/Sort';
 
 const ProductList = props => {

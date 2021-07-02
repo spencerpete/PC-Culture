@@ -1,3 +1,5 @@
+import './Search.css'
+
 const Search = props => {
   return (
     <form className="form" onSubmit={e => props.onSubmit(e)}>
@@ -6,7 +8,7 @@ const Search = props => {
         value={props.value}
         onChange={e => props.handleSearch(e)}
         name="Search"
-        placeholder="Search PC-Culture"
+        placeholder="Search"
         type="text"
       />
     </form>
