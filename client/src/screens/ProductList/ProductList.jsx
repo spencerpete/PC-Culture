@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
-import { Button, Layout, Product, Search, Filter, Sort, SideSortFilter } from '../../components';
+import { Button, Layout, Product, SearchSortFilter, SideSortFilter } from '../../components';
 import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/Sort';
 
 const ProductList = props => {
@@ -8,7 +8,7 @@ const ProductList = props => {
   const [searchResult, setSearchResult] = useState([]);
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState('name-ascending');
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -68,26 +68,29 @@ const ProductList = props => {
 
   return (
     <>
-    <SideSortFilter show={show} toggleShow={toggleShow}/>
-    <Layout user={props.user}>
-      <Button text="SideFilter" onClick={toggleShow}/>
-      <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Filter handleFilter={handleFilter} />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div>
-        {searchResult.map((product, index) => {
-          return (
-            <Product
-              _id={product._id}
-              name={product.name}
-              imgURL={product.imgURL}
-              price={product.price}
-              key={index}
-            />
-          );
-        })}
-      </div>
-    </Layout>
+      <SideSortFilter show={show} toggleShow={toggleShow} />
+      <Layout user={props.user}>
+        <SearchSortFilter
+          handleSubmit={handleSubmit}
+          handleSearch={handleSearch}
+          handleSort={handleSort}
+          handleFilter={handleFilter}
+          toggleShow={toggleShow}
+        />
+        <div>
+          {searchResult.map((product, index) => {
+            return (
+              <Product
+                _id={product._id}
+                name={product.name}
+                imgURL={product.imgURL}
+                price={product.price}
+                key={index}
+              />
+            );
+          })}
+        </div>
+      </Layout>
     </>
   );
 };

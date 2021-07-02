@@ -1,14 +1,35 @@
-.nav{
-  @apply bg-blue-400 flex;
-}
-nav{
-  @apply flex w-full text-2xl text-white m-2;
+.navbar {
+  @apply bg-blue-400 flex h-12;
 }
 
-.landing-link{
-  @apply place-self-center m-auto;
+.navbar-nav {
+  @apply flex items-center w-1/4
 }
 
-.menu{
+.navbar-dropdown {
+  @apply md:hidden self-center ml-2 text-white text-3xl
+}
+
+.nav-link {
+  @apply hidden md:block text-white px-4
+}
+
+.brand-container {
+  @apply text-white flex items-center justify-center w-2/4
+}
+
+.navbar-auth {
+  @apply flex justify-end items-center w-1/4
+}
+
+nav {
+  @apply flex w-full text-2xl m-2;
+}
+
+.brand {
+  @apply text-2xl font-semibold
+}
+
+.menu {
   @apply text-3xl;
 }
