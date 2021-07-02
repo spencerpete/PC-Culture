@@ -45,7 +45,12 @@ export default function SignUp(props) {
   };
   const renderError = () => {
     if (form.isError) {
-      return <div>{form.errorMsg}</div>;
+      return (
+        <div>
+          {form.errorMsg}
+          <Button text={'Sign-Up'} />
+        </div>
+      );
     } else {
       return <Button text={'Sign Up'} />;
     }

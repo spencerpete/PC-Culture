@@ -1,37 +1,56 @@
 import Select from '../Select/Select';
+import './ProductForm.css';
 
 const ProductForm = ({ onChange, product }) => {
   return (
     <>
-      <input type="text" name="name" value={product?.name} placeholder="Name" onChange={onChange} />
-      <input
-        type="text"
-        name="price"
-        value={product?.price}
-        placeholder="Price"
-        onChange={onChange}
-      />
-      <textarea
-        name="description"
-        value={product?.description}
-        placeholder="Description"
-        onChange={onChange}
-      />
-      <Select onChange={onChange} value={product?.category} />
-      <input
-        type="text"
-        value={product?.imgURL}
-        name="imgURL"
-        placeholder="Image URL"
-        onChange={onChange}
-      />
-      <input
-        type="text"
-        value={product?.link}
-        name="link"
-        placeholder="Link to Buy"
-        onChange={onChange}
-      />
+      <div className="input-wrapper">
+        <input
+          type="text"
+          name="name"
+          value={product?.name}
+          placeholder=" Name"
+          onChange={onChange}
+        />
+      </div>
+      <div className="input-wrapper">
+        <input
+          type="text"
+          name="price"
+          value={product?.price}
+          placeholder=" Price"
+          onChange={onChange}
+        />
+      </div>
+      <div className="input-wrapper">
+        <textarea
+          name="description"
+          value={product?.description}
+          placeholder=" Description"
+          onChange={onChange}
+        />
+      </div>
+      <div className="input-wrapper">
+        <Select className="select" onChange={onChange} value={product?.category} />
+      </div>
+      <div className="input-wrapper">
+        <input
+          type="text"
+          value={product?.imgURL}
+          name="imgURL"
+          placeholder=" Image URL"
+          onChange={onChange}
+        />
+      </div>
+      <div className="input-wrapper">
+        <input
+          type="text"
+          value={product?.link}
+          name="link"
+          placeholder=" Link to Buy"
+          onChange={onChange}
+        />
+      </div>
     </>
   );
 };

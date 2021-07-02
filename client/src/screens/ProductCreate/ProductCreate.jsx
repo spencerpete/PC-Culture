@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Layout, ProductForm, Button } from '../../components';
 import { createProduct } from '../../services/products';
+import './ProductCreate.css';
 
 const ProductCreate = () => {
   const [product, setProduct] = useState({
@@ -27,8 +28,8 @@ const ProductCreate = () => {
   }
   return (
     <Layout>
-      <div className="form">
-        <h2 className="form-heading">Add Product</h2>
+      <div className="form .shadow">
+        <div className="form-heading">Add Product</div>
         <form onSubmit={handleSubmit}>
           <ProductForm onChange={handleChange} product={product} />
           <Button text="Add" />

@@ -10,3 +10,7 @@ form{
 svg{
   @apply self-center;
 }
+
+.usererror{
+  @apply m-auto opacity-50;
+}

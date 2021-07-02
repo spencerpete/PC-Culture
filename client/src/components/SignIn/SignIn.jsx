@@ -42,7 +42,12 @@ const SignIn = props => {
 
   const renderError = () => {
     if (form.isError) {
-      return <div>{form.errorMsg}</div>;
+      return (
+        <div className="flex flex-col">
+          <div className="m-auto opacity-50">{form.errorMsg}</div>
+          <Button text={'Sign In'} />
+        </div>
+      );
     } else {
       return <Button text={'Sign In'} />;
     }

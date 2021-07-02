@@ -1,0 +1,13 @@
+
+.input-wrapper{
+  @apply border-b w-10/12 m-auto my-6 flex;
+}
+.select{
+  @apply border-b w-10/12 m-auto flex focus:outline-none;
+}
+textarea{
+  @apply w-full resize-none ;
+}
+textarea::placeholder{
+  @apply pt-5;
+}
