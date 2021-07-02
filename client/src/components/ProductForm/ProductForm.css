@@ -11,3 +11,9 @@ textarea{
 textarea::placeholder{
   @apply pt-5;
 }
+.icon{
+  @apply opacity-50 flex;
+}
+svg{
+  @apply self-center;
+}

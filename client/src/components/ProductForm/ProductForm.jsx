@@ -1,5 +1,6 @@
 import Select from '../Select/Select';
 import './ProductForm.css';
+import { FaDollarSign } from 'react-icons/fa';
 
 const ProductForm = ({ onChange, product }) => {
   return (
@@ -14,6 +15,9 @@ const ProductForm = ({ onChange, product }) => {
         />
       </div>
       <div className="input-wrapper">
+        <div className="icon">
+          <FaDollarSign />
+        </div>
         <input
           type="text"
           name="price"
