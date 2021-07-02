@@ -5,7 +5,7 @@ const Filter = ({ handleFilter }) => {
   return (
     <div className="form-group">
       <label className="form-label" htmlFor="select">Filter:</label>
-      <Select onChange={handleFilter} />
+      <Select onChange={handleFilter} className="select"/>
     </div>
   );
 };
