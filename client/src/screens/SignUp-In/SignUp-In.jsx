@@ -30,6 +30,7 @@ const SignUpIn = props => {
         <div className="UserFormTitle">
           <div
             onClick={() => (
+              // eslint-disable-next-line
               setUserAction('sign-up'), setSignInClass('opacity-50'), setSignUpClass('')
             )}
             className={signUpClass}
@@ -39,6 +40,7 @@ const SignUpIn = props => {
           <div>/</div>
           <div
             onClick={() => (
+              // eslint-disable-next-line
               setUserAction('sign-in'), setSignUpClass('opacity-50'), setSignInClass('')
             )}
             className={signInClass}
