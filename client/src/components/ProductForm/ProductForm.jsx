@@ -31,7 +31,7 @@ const ProductForm = ({ onChange, product }) => {
         />
       </div>
       <div className="input-wrapper">
-        <Select className="select" onChange={onChange} value={product?.category} />
+        <Select className={'product-form-select'} onChange={onChange} value={product?.category} />
       </div>
       <div className="input-wrapper">
         <input

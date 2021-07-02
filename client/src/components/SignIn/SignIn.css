@@ -1,4 +1,4 @@
-form{
+.sign-in-input{
   @apply flex flex-col justify-center;
 }
 .input{

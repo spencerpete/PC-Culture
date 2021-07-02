@@ -54,7 +54,7 @@ const SignIn = props => {
   };
   return (
     <div>
-      <form className="form" onSubmit={onSignIn}>
+      <form className="" onSubmit={onSignIn}>
         <div className="input">
           <div className="icon">
             <SiMailDotRu />
