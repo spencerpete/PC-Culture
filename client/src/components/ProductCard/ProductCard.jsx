@@ -1,3 +1,4 @@
+import { Link, useParams } from 'react-router-dom';
 import Button from '../Button/Button'
 
 
@@ -13,7 +14,9 @@ const ProductCard = props => {
         <div className="detailDescription m-3 p-1 pb-10">{props.product.description}</div>
       </div>
         <div className="m-6 text-center pb-6">
-          <Button text="Edit" />
+          <Link to={`/products/${props.product._id}/edit`}>
+            <Button text="Edit" />
+          </Link>
         </div>
     </div>
   );
