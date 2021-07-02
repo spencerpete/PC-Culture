@@ -66,17 +66,19 @@ const ProductList = props => {
       <Filter handleFilter={handleFilter} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div>
-        {searchResult.map((product, index) => {
-          return (
-            <Product
-              _id={product._id}
-              name={product.name}
-              imgURL={product.imgURL}
-              price={product.price}
-              key={index}
-            />
-          );
-        })}
+        <div>
+          {searchResult.map((product, index) => {
+            return (
+              <Product
+                _id={product._id}
+                name={product.name}
+                imgURL={product.imgURL}
+                price={product.price}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
     </Layout>
   );
