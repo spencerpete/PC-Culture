@@ -12,6 +12,7 @@ const ProductCreate = ({user}) => {
     category: 'category',
     imgURL: '',
     link: '',
+    userId: user.id
   });
 
   const history = useHistory();
@@ -26,6 +27,7 @@ const ProductCreate = ({user}) => {
     await createProduct(product);
     history.push('/products');
   }
+
   return (
     <Layout user={user}>
       <div className="form .shadow">

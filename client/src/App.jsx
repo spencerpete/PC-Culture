@@ -40,7 +40,7 @@ const App = () => {
           {user ? <ProductEdit user={user} /> : <Redirect to="/sign-up" />}
         </Route>
         <Route path="/sign-up">
-          <SignUpIn setUser={setUser} />
+          <SignUpIn user={user} setUser={setUser} />
         </Route>
         <Route path="/sign-out">
           <SignOut setUser={setUser} />
