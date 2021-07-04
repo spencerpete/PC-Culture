@@ -10,6 +10,14 @@
   @apply text-black absolute left-5 top-5 text-xl
 }
 
+.control-container {
+  @apply flex flex-col justify-between w-60 h-40
+}
+
+.sidesort-form-group {
+  @apply flex flex-col justify-start
+}
+
 .show {
   @apply transform translate-x-0
 }
