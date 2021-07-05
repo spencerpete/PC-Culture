@@ -35,13 +35,15 @@ const SignUpIn = props => {
           <div
             onClick={() => setUserAction('sign-up')}
             className={userAction === 'sign-up' ? '' : 'opacity-50'}
-          >
+>
             Sign Up
           </div>
           <div className="mx-2"> / </div>
           <div
+
             onClick={() => setUserAction('sign-in')}
             className={userAction === 'sign-in' ? '' : 'opacity-50'}
+
           >
             Sign In
           </div>
