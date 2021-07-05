@@ -3,7 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { getOneProduct, updateProduct, deleteProduct } from '../../services/products';
 import { Layout, ProductForm, Button } from '../../components';
 
-const ProductEdit = () => {
+const ProductEdit = ({user}) => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
   const history = useHistory();
@@ -25,15 +25,17 @@ const ProductEdit = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     await updateProduct(id, product);
-    history.push(`/products`);
+    history.push(`/products/${id}`);
   }
 
-  async function handleDelete() {
+  async function handleDelete(e) {
+    e.preventDefault()
     await deleteProduct(id);
+    history.push('/products')
   }
 
   return (
-    <Layout>
+    <Layout user={user}>
       <div className="form">
         <h2 className="form-heading">Edit Product</h2>
         <form onSubmit={handleSubmit}>

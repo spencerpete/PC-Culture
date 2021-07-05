@@ -52,7 +52,7 @@ const ProductList = props => {
   }
 
   function handleFilter(event) {
-    const filteredResults = products.filter(product => product.category === event.target.value);
+    const filteredResults = products.filter(product => product.category.includes(event.target.value));
     setSearchResult(filteredResults);
   }
 
