@@ -3,7 +3,7 @@ import { Layout, ProductCard } from '../../components';
 import { getOneProduct } from '../../services/products';
 import { useParams } from 'react-router-dom';
 
-const ProductDetail = () => {
+const ProductDetail = ({user}) => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
 
@@ -16,8 +16,8 @@ const ProductDetail = () => {
   }, [id]);
 
   return (
-    <Layout>
-      <ProductCard product={product} />
+    <Layout user={user}>
+      <ProductCard product={product} user={user}/>
     </Layout>
   );
 };
