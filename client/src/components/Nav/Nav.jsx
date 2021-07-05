@@ -8,19 +8,33 @@ export default function Nav({ user, toggleShow }) {
       <div className="navbar">
         <ul className="navbar-nav">
           <FiMenu onClick={toggleShow} className="navbar-dropdown" />
-          <Link to="/products" className="nav-link">All Parts</Link>
-          {user ? <Link to="/products/new" className="nav-link">Add Part</Link> : ''}
+          <Link to="/products" className="nav-link">
+            All Parts
+          </Link>
+          {user ? (
+            <Link to="/products/new" className="nav-link">
+              Add Part
+            </Link>
+          ) : (
+            ''
+          )}
         </ul>
         <div className="brand-container">
-          <Link className="brand" to="/">PC Culture</Link>
+          <Link className="brand" to="/">
+            PC Culture
+          </Link>
         </div>
         <ul className="navbar-auth">
           {user ? (
             <Link to="/sign-out" className="nav-link">Sign Out</Link>
           ) : (
             <>
-              <Link to="/sign-up" className="nav-link">Sign Up</Link>
-              <Link to="/sign-up" className="nav-link">Sign In</Link>
+              <Link to="/sign-up" className="nav-link">
+                Sign Up
+              </Link>
+              <Link to="/sign-in" className="nav-link">
+                Sign In
+              </Link>
             </>
           )}
         </ul>

@@ -3,12 +3,15 @@ import Layout from '../../components/Layout/Layout';
 import SignIn from '../../components/SignIn/SignIn';
 import SignUp from '../../components/SignUp/SignUp';
 import './SignUp-In.css';
+import { useParams } from 'react-router';
 
 const SignUpIn = props => {
+  const { params } = useParams();
   const { setUser } = props;
-  const [userAction, setUserAction] = useState('sign-up');
-  const [signUpClass, setSignUpClass] = useState('');
-  const [signInClass, setSignInClass] = useState('opacity-50');
+  const [userAction, setUserAction] = useState(params);
+  // const [signUpClass, setSignUpClass] = useState('');
+  // const [signInClass, setSignInClass] = useState('opacity-50');
+  // const { params } = useParams();
 
   const SignInForm = () => {
     return (
@@ -24,26 +27,23 @@ const SignUpIn = props => {
       </div>
     );
   };
+
   return (
     <Layout user={props.user}>
-      <div className=".shadow border rounded flex flex-col justify-center w-11/12 md:w-9/12 lg:w-6/12 m-auto">
+      <div className=".shadow border rounded flex flex-col justify-center w-11/12 md:w-9/12 lg:w-6/12 m-auto bg-white">
         <div className="UserFormTitle">
           <div
-            onClick={() => (
-              // eslint-disable-next-line
-              setUserAction('sign-up'), setSignInClass('opacity-50'), setSignUpClass('')
-            )}
-            className={signUpClass}
-          >
+            onClick={() => setUserAction('sign-up')}
+            className={userAction === 'sign-up' ? '' : 'opacity-50'}
+>
             Sign Up
           </div>
-          <div>/</div>
+          <div className="mx-2"> / </div>
           <div
-            onClick={() => (
-              // eslint-disable-next-line
-              setUserAction('sign-in'), setSignUpClass('opacity-50'), setSignInClass('')
-            )}
-            className={signInClass}
+
+            onClick={() => setUserAction('sign-in')}
+            className={userAction === 'sign-in' ? '' : 'opacity-50'}
+
           >
             Sign In
           </div>
