@@ -1,12 +1,17 @@
 import './Filter.css';
 
-const Filter = ({ handleFilter, className, value }) => {
+const Filter = ({ handleFilter, setFilterType, className, value }) => {
+  const filter = event => {
+    handleFilter(event.target.value);
+    setFilterType(event.target.value);
+  };
+
   return (
     <div className={className}>
       <label className="form-label" htmlFor="filter">
         Filter:
       </label>
-      <select className="select" id="filter" value={value} name="category" onChange={handleFilter}>
+      <select className="select" id="filter" value={value} name="category" onChange={filter}>
         <option value="">All</option>
         <option value="cpu">CPU</option>
         <option value="ram">RAM</option>
