@@ -10,7 +10,7 @@
 }
 
 .nav-link {
-  @apply hidden md:block text-white px-4 md:text-xl lg:text-2xl
+  @apply hidden md:block text-white px-4 md:text-xl
 }
 
 .brand-container {
@@ -22,6 +22,6 @@
 }
 
 .brand {
-  @apply text-2xl  md:text-3xl lg:text-4xl font-semibold
+  @apply text-2xl  md:text-3xl font-semibold
 }
 
