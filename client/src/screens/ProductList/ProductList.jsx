@@ -90,6 +90,8 @@ const ProductList = props => {
         handleSort={handleSort}
         handleSubmit={handleSubmit}
         handleFilter={handleFilter}
+        setFilterType={setFilterType}
+        category={filterType}
         show={show}
         toggleShow={toggleShow}
       />

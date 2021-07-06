@@ -1,11 +1,10 @@
 import './Filter.css';
 
 const Filter = ({ handleFilter, setFilterType, className, value }) => {
-
   const filter = event => {
-    handleFilter(event.target.value)
-    setFilterType(event.target.value)
-  }
+    handleFilter(event.target.value);
+    setFilterType(event.target.value);
+  };
 
   return (
     <div className={className}>
