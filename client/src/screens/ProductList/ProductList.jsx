@@ -20,7 +20,6 @@ const ProductList = props => {
       setProducts(listProducts);
       if (category !== 'all') {
         setSearchResult(listProducts.filter(product => product.category.includes(category)))
-        // setFilterType(category)
       } else {
         setSearchResult(listProducts);
         setFilterType(category)
@@ -62,8 +61,6 @@ const ProductList = props => {
   }
 
   function handleFilter(filterType) {
-    console.log(filterType);
-    console.log(products)
     if (filterType === 'all') {
       const filteredResults = products.filter(product => product.category.includes(''));
       setSearchResult(filteredResults);
@@ -79,7 +76,6 @@ const ProductList = props => {
     const results = products.filter(product =>
       product.name.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    console.log(results);
     setSearchResult(results);
     setApplySort(true);
   };
