@@ -2,7 +2,7 @@
   @apply bg-blue-400 flex h-12 md:h-20;
 }
 .navbar-nav {
-  @apply flex items-center w-1/4
+  @apply flex items-center w-1/3
 }
 
 .navbar-dropdown {
@@ -10,15 +10,15 @@
 }
 
 .nav-link {
-  @apply hidden md:block text-white px-4 md:text-xl
+  @apply hidden md:block text-white px-4 md:text-lg
 }
 
 .brand-container {
-  @apply text-white flex items-center justify-center w-2/4;
+  @apply text-white flex items-center justify-center w-1/3;
 }
 
 .navbar-auth {
-  @apply flex justify-end items-center w-1/4
+  @apply flex justify-end items-center w-1/3
 }
 
 .brand {
