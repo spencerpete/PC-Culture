@@ -24,7 +24,6 @@ const ProductCard = ({ product, user }) => {
               <Button text="Edit" />
             </Link>
           )}
-
           <a href={product.link}>
             <Button text="Buy Here" />
           </a>
