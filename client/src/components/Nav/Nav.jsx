@@ -26,7 +26,9 @@ export default function Nav({ user, toggleShow }) {
         </div>
         <ul className="navbar-auth">
           {user ? (
-            <Link to="/sign-out" className="nav-link">Sign Out</Link>
+            <Link to="/sign-out" className="nav-link">
+              Sign Out
+            </Link>
           ) : (
             <>
               <Link to="/sign-up" className="nav-link">
