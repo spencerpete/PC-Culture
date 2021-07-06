@@ -3,7 +3,7 @@
 }
 
 .copy-title{
-  @apply mx-auto mb-4 text-2xl md:text-3xl lg:text-4xl;
+  @apply mx-auto mb-4 text-2xl font-bold md:text-3xl lg:text-4xl;
 }
 
 .copy-body{
