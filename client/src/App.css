@@ -1,12 +1,12 @@
-input{
+input {
   @apply focus:outline-none w-full;
 }
-form{
+form {
   @apply flex flex-col justify-center;
 }
-.form{
-  @apply  border rounded flex flex-col justify-center w-11/12  m-auto;
+.form {
+  @apply border rounded flex flex-col justify-center w-11/12  m-auto;
 }
-body{
+body {
   @apply bg-gray-50;
 }
