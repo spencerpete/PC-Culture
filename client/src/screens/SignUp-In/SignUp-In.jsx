@@ -30,20 +30,18 @@ const SignUpIn = props => {
 
   return (
     <Layout user={props.user}>
-      <div className=".shadow border rounded flex flex-col justify-center w-11/12 md:w-9/12 lg:w-6/12 m-auto bg-white">
+      <div className="shadow-lg border rounded flex flex-col justify-center w-11/12 md:w-9/12 lg:w-6/12 m-auto bg-white">
         <div className="UserFormTitle">
           <div
             onClick={() => setUserAction('sign-up')}
             className={userAction === 'sign-up' ? '' : 'opacity-50'}
->
+          >
             Sign Up
           </div>
           <div className="mx-2"> / </div>
           <div
-
             onClick={() => setUserAction('sign-in')}
             className={userAction === 'sign-in' ? '' : 'opacity-50'}
-
           >
             Sign In
           </div>

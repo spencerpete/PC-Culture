@@ -30,7 +30,7 @@ const ProductCreate = ({ user }) => {
 
   return (
     <Layout user={user}>
-      <div className="form .shadow bg-white">
+      <div className="form shadow-lg bg-white">
         <div className="form-heading">Add Product</div>
         <form onSubmit={handleSubmit}>
           <ProductForm onChange={handleChange} product={product} />
