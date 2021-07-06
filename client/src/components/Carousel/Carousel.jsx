@@ -34,7 +34,7 @@ const Carousel = () => {
         return (
           <div key={index} className={index === caroImg ? 'image active' : 'image'}>
             {index === caroImg && (
-              <img src={image.image} alt="Computer" className="image carousel-image" />
+              <img src={image.image} alt="Computer" className="carousel-image" />
             )}
           </div>
         );
