@@ -27,7 +27,7 @@ const App = () => {
         <Route exact path="/">
           <Home user={user} />
         </Route>
-        <Route exact path="/products">
+        <Route exact path="/products/:category">
           <ProductList user={user} />
         </Route>
         <Route exact path="/products/new">

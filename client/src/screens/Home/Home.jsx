@@ -17,7 +17,7 @@ export default function Home({ user }) {
             Welcome to PC Culture! Your one stop for all your PC building needs. Whether it's graphics
             cards, motherboards, CPUs, SSDs... you want it, we got it. And don't worry, we have gone
             through and picked out the best of the best so no matter your PC knowledge you can rest
-            easy knowing that no matter the build you are going to have one spanking hot PC!
+            easy knowing that whatever you build, you're going to have one spanking hot PC!
           </div>
         </div>
         <CategoryCard />

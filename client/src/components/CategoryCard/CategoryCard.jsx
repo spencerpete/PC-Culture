@@ -49,8 +49,8 @@ const CategoryCard = () => {
         return (
           <Link
             key={index}
-            to="/products"
-            // to={`/products/${category.id}`}
+            // to="/products"
+            to={`/products/${category.id}`}
             className="categoryCard-shell shadow-lg"
           >
             <div className="categoryCard-img-shell">
