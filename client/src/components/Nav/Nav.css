@@ -1,7 +1,6 @@
 .navbar {
-  @apply bg-blue-400 flex h-12;
+  @apply bg-blue-400 flex h-12 md:h-20;
 }
-
 .navbar-nav {
   @apply flex items-center w-1/4
 }
@@ -11,11 +10,11 @@
 }
 
 .nav-link {
-  @apply hidden md:block text-white px-4
+  @apply hidden md:block text-white px-4 md:text-xl lg:text-2xl
 }
 
 .brand-container {
-  @apply text-white flex items-center justify-center w-2/4
+  @apply text-white flex items-center justify-center w-2/4;
 }
 
 .navbar-auth {
@@ -23,6 +22,6 @@
 }
 
 .brand {
-  @apply text-2xl font-semibold
+  @apply text-2xl  md:text-3xl lg:text-4xl font-semibold
 }
 

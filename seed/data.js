@@ -43,6 +43,7 @@ const insertData = async () => {
       category: 'cpu',
       imgURL: 'https://c1.neweggimages.com/ProductImage/19-113-569-V01.jpg',
       link: 'https://www.newegg.com/amd-ryzen-5-3600/p/N82E16819113569',
+      userId: user1
     },
     {
       name: 'Intel Core i7 10700K',
@@ -52,6 +53,7 @@ const insertData = async () => {
       category: 'cpu',
       imgURL: 'https://c1.neweggimages.com/ProductImage/19-118-123-V01.jpg',
       link: 'https://www.newegg.com/intel-core-i7-10700k-core-i7-10th-gen/p/N82E16819118123',
+      userId: user1
     },
     {
       name: 'G.Skill Ripjaws V Series 16GB',
@@ -61,6 +63,7 @@ const insertData = async () => {
       category: 'ram',
       imgURL: 'https://c1.neweggimages.com/ProductImage/20-231-941-03.jpg',
       link: 'https://www.newegg.com/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820231941',
+      userId: user1
     },
     {
       name: 'G.Skill Trident Z RGB 16BG',
@@ -70,6 +73,7 @@ const insertData = async () => {
       category: 'ram',
       imgURL: 'https://c1.neweggimages.com/ProductImage/20-232-728-V01.jpg',
       link: 'https://www.newegg.com/g-skill-16gb-288-pin-ddr4-sdram/p/N82E16820232728',
+      userId: user2
     },
     {
       name: 'TUF Gaming X570-Pro',
@@ -80,6 +84,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/629457_186510_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/629457/asus-x570-pro-tuf-gaming-wifi-amd-am4-atx-motherboard',
+      userId: user2
     },
     {
       name: 'ASUS Z490 Prime Intel',
@@ -90,6 +95,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/623215_106641_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/623215/asus-z490-prime-intel-lga-1200-atx-motherboard',
+      userId: user2
     },
     {
       name: 'EVGA GeForce RTX 3080 FTW3',
@@ -100,6 +106,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/628346_173013_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/628346/evga-geforce-rtx-3080-ftw3-ultra-gaming-triple-fan-10gb-gddr6x-pcie-40-graphics-card',
+      userId: user3
     },
     {
       name: 'EVGA GeForce RTX 3080Ti FTW3',
@@ -110,6 +117,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/638317_283739_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/638317/evga-nvidia-geforce-rtx-3080-ti-ftw3-ultra-gaming-triple-fan-12gb-gddr6x-pcie-40-graphics-card',
+      userId: user3
     },
     {
       name: 'Samsung 980 SSD 1TB M.2 NVMe',
@@ -120,6 +128,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/633661_232421_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/633661/samsung-980-ssd-1tb-(mz-v8v1t0b-am)-m2-nvme[…]internal-solid-state-drive-with-v-nand-3-bit-mlc-technology',
+      userId: user3
     },
     {
       name: 'Samsung 870 EVO 1TB SSD',
@@ -130,6 +139,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/632085_216952_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/632085/samsung-870-evo-1tb-ssd-3-bit-mlc-v-nand-sata-iii-6gb-s-25-internal-solid-state-drive',
+      userId: user4
     },
     {
       name: 'Lian Li Lancool II Mesh',
@@ -140,6 +150,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/638084_281121_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/638084/lian-li-lancool-ii-mesh-tempered-glass-eatx-full-tower-computer-case-performance-black',
+      userId: user4
     },
     {
       name: 'Lian Li Lancool II Mesh RGB',
@@ -150,6 +161,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/638085_281139_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/638085/lian-li-lancool-ii-tempered-glass-eatx-mesh-mid-tower-computer-case-white#photogroup-1',
+      userId: user4
     },
     {
       name: 'EVGA SuperNOVA 850 GA',
@@ -160,6 +172,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/624907_128025_01_front_zoom.jpg',
       link: 'https://www.microcenter.com/product/624907/evga-supernova-850-ga-850-watt-80-plus-gold-atx-fully-modular-power-supply',
+      userId: user1
     },
     {
       name: 'EVGA SuperNOVA 750 GT',
@@ -170,6 +183,7 @@ const insertData = async () => {
       imgURL:
         'https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/624764_127753_01_package_zoom.jpg',
       link: 'https://www.microcenter.com/product/624764/evga-supernova-750-gt-750-watt-80-plus-gold-atx-fully-modular-power-supply',
+      userId: user2
     },
   ];
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
 import { Layout, Product, SearchSortFilter, SideSortFilter } from '../../components';
 import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/Sort';
+import { useParams } from 'react-router-dom';
 
 const ProductList = props => {
   const [products, setProducts] = useState([]);
@@ -9,7 +10,7 @@ const ProductList = props => {
   const [applySort, setApplySort] = useState(false);
   const [sortType, setSortType] = useState('name-ascending');
   const [show, setShow] = useState(false);
-
+  const { category } = useParams();
   useEffect(() => {
     const fetchProducts = async () => {
       const listProducts = await getProducts();
@@ -52,7 +53,9 @@ const ProductList = props => {
   }
 
   function handleFilter(event) {
-    const filteredResults = products.filter(product => product.category === event.target.value);
+    const filteredResults = products.filter(product =>
+      product.category.includes(event.target.value)
+    );
     setSearchResult(filteredResults);
   }
 

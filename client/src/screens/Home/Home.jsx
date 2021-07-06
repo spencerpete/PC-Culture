@@ -4,9 +4,9 @@ import CategoryCard from '../../components/CategoryCard/CategoryCard';
 import Layout from '../../components/Layout/Layout';
 import './Home.css';
 
-export default function Home() {
+export default function Home({ user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div>
         <div>
           <Carousel />
@@ -14,9 +14,10 @@ export default function Home() {
         <div className="landingPage-copy-container">
           <div className="copy-title">What make us diff</div>
           <div className="copy-body">
-            Welcome PC Culture your one stop for all you pc building needs. We got graphics cards,
-            motherboards, CPUs, SSDs, everything from Cooler Master to G. Skill you want it, we got
-            it, and if we don’t, you can add it.
+            Welcome to PC Culture! Your one stop for all your pc building needs. We got graphics
+            cards, motherboards, CPUs, SSDs... you want it, we got it, and don't worry we have gone
+            through and picked out the best of the best so no matter your PC knowledge you can rest
+            knowing that no matter the build you are going to have one spanking hot PC!
           </div>
         </div>
         <CategoryCard />

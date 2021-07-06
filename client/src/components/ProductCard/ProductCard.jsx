@@ -1,8 +1,9 @@
-import { Link, useParams } from 'react-router-dom';
-import Button from '../Button/Button'
+import { useHistory } from 'react-router-dom';
+import Button from '../Button/Button';
 
+const ProductCard = ({ product, user }) => {
+  const history = useHistory();
 
-const ProductCard = props => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="detailImg mx-auto bg-white rounded-3xl shadow-lg m-3 mb-8 h-80 overflow-hidden w-10/12 md:w-8/12 lg:w-6/12">
@@ -26,5 +27,3 @@ const ProductCard = props => {
   );
 };
 export default ProductCard;
-
-
