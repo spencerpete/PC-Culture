@@ -4,7 +4,7 @@ import { Layout, ProductForm, Button } from '../../components';
 import { createProduct } from '../../services/products';
 import './ProductCreate.css';
 
-const ProductCreate = ({user}) => {
+const ProductCreate = ({ user }) => {
   const [product, setProduct] = useState({
     name: '',
     price: '',
@@ -12,6 +12,7 @@ const ProductCreate = ({user}) => {
     category: 'category',
     imgURL: '',
     link: '',
+    userId: user.id,
   });
 
   const history = useHistory();
@@ -26,9 +27,10 @@ const ProductCreate = ({user}) => {
     await createProduct(product);
     history.push('/products');
   }
+
   return (
     <Layout user={user}>
-      <div className="form .shadow">
+      <div className="form shadow-lg bg-white">
         <div className="form-heading">Add Product</div>
         <form onSubmit={handleSubmit}>
           <ProductForm onChange={handleChange} product={product} />

@@ -27,7 +27,7 @@ const App = () => {
         <Route exact path="/">
           <Home user={user} />
         </Route>
-        <Route exact path="/products">
+        <Route exact path="/products/:category">
           <ProductList user={user} />
         </Route>
         <Route exact path="/products/new">
@@ -39,11 +39,11 @@ const App = () => {
         <Route exact path="/products/:id/edit">
           {user ? <ProductEdit user={user} /> : <Redirect to="/sign-up" />}
         </Route>
-        <Route path="/sign-up">
-          <SignUpIn setUser={setUser} />
-        </Route>
         <Route path="/sign-out">
           <SignOut setUser={setUser} />
+        </Route>
+        <Route path="/:params">
+          <SignUpIn user={user} setUser={setUser} />
         </Route>
       </Switch>
     </div>

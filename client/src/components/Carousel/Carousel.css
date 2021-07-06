@@ -10,5 +10,12 @@
 }
 
 .carousel-image{
-  @apply w-full rounded-md transform transition duration-150 ease-out;
+  @apply w-full rounded-md;
 }
+
+.image{
+  @apply opacity-50 duration-700 ease-out scale-75;
+}
+.image.active{
+  @apply  opacity-100 duration-700 ease-in scale-105; 
+} 
