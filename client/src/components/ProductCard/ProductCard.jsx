@@ -17,7 +17,7 @@ const ProductCard = ({ product, user }) => {
         <div className="detailName m-3 text-2xl font-semibold p-3 pt-10">{product.name}</div>
         <div className="detailPrice m-3 font-medium p-2">{product.price}</div>
         <div className="detailDescription m-3 p-1 pb-4">{product.description}</div>
-        {user.id === product.userId && (
+        {user?.id === product.userId && (
           <Button text="Edit" onClick={() => history.push(`/products/${product._id}/edit`)} />
         )}
       </div>
