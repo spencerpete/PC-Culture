@@ -19,10 +19,10 @@ const ProductList = props => {
       const listProducts = await getProducts();
       setProducts(listProducts);
       if (category !== 'all') {
-        setSearchResult(listProducts.filter(product => product.category.includes(category)))
+        setSearchResult(listProducts.filter(product => product.category.includes(category)));
       } else {
         setSearchResult(listProducts);
-        setFilterType(category)
+        setFilterType(category);
       }
     };
     fetchProducts();
@@ -101,7 +101,7 @@ const ProductList = props => {
           category={filterType}
           toggleShow={toggleShow}
         />
-        <div className="mt-5 grid grid-cols-2 md:grid md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-5 grid grid-cols-2 md:grid md:grid-cols-3 lg:grid-cols-4 hover:bg-gray-50 hover:shadow-inner hover:underline">
           {searchResult.map((product, index) => {
             return (
               <Product
