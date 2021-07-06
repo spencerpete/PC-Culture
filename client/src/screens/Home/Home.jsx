@@ -4,9 +4,9 @@ import CategoryCard from '../../components/CategoryCard/CategoryCard';
 import Layout from '../../components/Layout/Layout';
 import './Home.css';
 
-export default function Home() {
+export default function Home({ user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div>
         <div>
           <Carousel />
