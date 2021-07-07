@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import SignIn from '../../components/SignIn/SignIn';
 import SignUp from '../../components/SignUp/SignUp';
@@ -12,6 +12,9 @@ const SignUpIn = props => {
   // const [signUpClass, setSignUpClass] = useState('');
   // const [signInClass, setSignInClass] = useState('opacity-50');
   // const { params } = useParams();
+  useEffect(() => {
+    setUserAction(params);
+  }, [params]);
 
   const SignInForm = () => {
     return (

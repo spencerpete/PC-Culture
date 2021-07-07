@@ -25,7 +25,7 @@ const ProductCreate = ({ user }) => {
   async function handleSubmit(e) {
     e.preventDefault();
     await createProduct(product);
-    history.push('/products');
+    history.push('/products/all');
   }
 
   return (

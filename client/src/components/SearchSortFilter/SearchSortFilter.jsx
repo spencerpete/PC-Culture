@@ -19,7 +19,7 @@ const SearchSortFilter = ({
         setFilterType={setFilterType}
         className="form-group"
       />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} className="form-group" />
+      <Sort onSubmit={handleSubmit} handleSort={handleSort} id="sort" className="form-group" />
       <SideSortBtn onClick={toggleShow} />
     </div>
   );
