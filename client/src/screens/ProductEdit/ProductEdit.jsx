@@ -25,13 +25,13 @@ const ProductEdit = ({user}) => {
   async function handleSubmit(e) {
     e.preventDefault();
     await updateProduct(id, product);
-    history.push(`/products/${id}`);
+    history.push(`/product/${id}`);
   }
 
   async function handleDelete(e) {
     e.preventDefault()
     await deleteProduct(id);
-    history.push('/products')
+    history.push('/products/all')
   }
 
   return (

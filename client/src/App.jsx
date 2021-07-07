@@ -33,17 +33,20 @@ const App = () => {
         <Route exact path="/products/new">
           {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />}
         </Route>
-        <Route exact path="/products/:id">
+        <Route exact path="/products/:category">
+          <ProductList user={user} />
+        </Route>
+        <Route exact path="/product/:id">
           <ProductDetail user={user} />
         </Route>
         <Route exact path="/products/:id/edit">
           {user ? <ProductEdit user={user} /> : <Redirect to="/sign-up" />}
         </Route>
-        <Route path="/sign-up">
-          <SignUpIn user={user} setUser={setUser} />
-        </Route>
         <Route path="/sign-out">
           <SignOut setUser={setUser} />
+        </Route>
+        <Route path="/:params">
+          <SignUpIn user={user} setUser={setUser} />
         </Route>
       </Switch>
     </div>
