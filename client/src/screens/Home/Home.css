@@ -7,5 +7,5 @@
 }
 
 .copy-body{
-  @apply w-10/12 m-auto text-xl md:text-2xl md:w-9/12 lg:text-3xl;
+  @apply w-10/12 m-auto text-base md:text-xl md:w-9/12 lg:text-2xl;
 }
