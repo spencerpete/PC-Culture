@@ -27,6 +27,9 @@ const App = () => {
         <Route exact path="/">
           <Home user={user} />
         </Route>
+        <Route exact path="/products">
+          <ProductList user={user} />
+        </Route>
         <Route exact path="/products/new">
           {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />}
         </Route>
