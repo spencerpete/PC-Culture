@@ -8,25 +8,27 @@ const SideNav = ({ user, show, toggleShow }) => {
       <div className={show ? 'sidenav show' : 'sidenav'}>
         <div className=" sidenav-header">
           <FaTimes className="close" onClick={toggleShow} />
-          <h2 className="sidenav-brand">PC Culture</h2>
+          <Link className="sidenav-brand" to="/" onClick={toggleShow}>
+            PC Culture
+          </Link>
         </div>
         <div className="sidenav-links">
           <Link className="sidenav-link" to="/products/all" onClick={toggleShow}>
             All Parts
           </Link>
-          <Link className="sidenav-link" to="/products/new">
+          <Link className="sidenav-link" to="/products/new" onClick={toggleShow}>
             Create Part
           </Link>
           {user ? (
-            <Link className="sidenav-link" to="/sign-out">
+            <Link className="sidenav-link" to="/sign-out" onClick={toggleShow}>
               Sign Out
             </Link>
           ) : (
             <>
-              <Link className="sidenav-link" to="/sign-in">
+              <Link className="sidenav-link" to="/sign-in" onClick={toggleShow}>
                 Sign In
               </Link>
-              <Link className="sidenav-link" to="/sign-up">
+              <Link className="sidenav-link" to="/sign-up" onClick={toggleShow}>
                 Sign Up
               </Link>
             </>
