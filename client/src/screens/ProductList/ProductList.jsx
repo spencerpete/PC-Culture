@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getProducts } from '../../services/products';
 import { Layout, Product, SearchSortFilter, SideSortFilter } from '../../components';
-import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/Sort';
+import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort';
 import { useParams } from 'react-router-dom';
 
 const ProductList = props => {
