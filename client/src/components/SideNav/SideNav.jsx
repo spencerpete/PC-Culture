@@ -17,7 +17,7 @@ const SideNav = ({ user, show, toggleShow }) => {
             All Parts
           </Link>
           <Link className="sidenav-link" to="/products/new" onClick={toggleShow}>
-            Create Part
+            Add Part
           </Link>
           {user ? (
             <Link className="sidenav-link" to="/sign-out" onClick={toggleShow}>
