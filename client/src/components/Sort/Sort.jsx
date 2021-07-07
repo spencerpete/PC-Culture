@@ -1,15 +1,15 @@
 import './Sort.css'
 
-const Sort = props => {
-  const handleSort = event => {
-    props.handleSort(event.target.value);
+const Sort = ({handleSort, handleSubmit, className, id}) => {
+  const sort = event => {
+    handleSort(event.target.value);
   };
 
   return (
-    <form onSubmit={props.handleSubmit}>
-      <div className={props.className}>
-        <label className="form-label" htmlFor="sort">Sort:</label>
-        <select className="select" id="sort" onChange={handleSort}>
+    <form onSubmit={handleSubmit}>
+      <div className={className}>
+        <label className="form-label" htmlFor={id}>Sort:</label>
+        <select className="select" id={id} onChange={sort}>
           <option value="price-ascending">&nbsp; Price, low to high &nbsp;</option>
           <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
           <option value="name-ascending">&nbsp; Alphabetically, A-Z &nbsp;</option>

@@ -3,7 +3,7 @@ import Filter from './Filter/Filter';
 import Footer from './Footer/Footer'
 import Layout from './Layout/Layout';
 import Nav from './Nav/Nav'
-import Product from './Product/product';
+import Product from './Product/Product';
 import ProductCard from './ProductCard/ProductCard';
 import ProductForm from './ProductForm/ProductForm';
 import Search from './Search/Search';

@@ -22,7 +22,12 @@ const SideSortFilter = ({
           setFilterType={setFilterType}
           className="sidesort-form-group"
         />
-        <Sort onSubmit={handleSubmit} handleSort={handleSort} className="sidesort-form-group" />
+        <Sort
+          onSubmit={handleSubmit}
+          handleSort={handleSort}
+          id="side-sort"
+          className="sidesort-form-group"
+        />
       </div>
       <Button text="Apply" onClick={toggleShow} />
     </div>
