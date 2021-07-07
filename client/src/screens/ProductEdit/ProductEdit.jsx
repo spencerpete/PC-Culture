@@ -3,7 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { getOneProduct, updateProduct, deleteProduct } from '../../services/products';
 import { Layout, ProductForm, Button } from '../../components';
 
-const ProductEdit = ({user}) => {
+const ProductEdit = ({ user }) => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
   const history = useHistory();
@@ -29,18 +29,18 @@ const ProductEdit = ({user}) => {
   }
 
   async function handleDelete(e) {
-    e.preventDefault()
+    e.preventDefault();
     await deleteProduct(id);
-    history.push('/products/all')
+    history.push('/products/all');
   }
 
   return (
     <Layout user={user}>
-      <div className="form">
+      <div className="form shadow-lg bg-white">
         <h2 className="form-heading">Edit Product</h2>
         <form onSubmit={handleSubmit}>
           <ProductForm onChange={handleChange} onSubmit={handleSubmit} product={product} />
-          <div className="flex">
+          <div className="flex justify evenly">
             <Button text="Update" />
             <Button text="Delete" onClick={handleDelete} />
           </div>
