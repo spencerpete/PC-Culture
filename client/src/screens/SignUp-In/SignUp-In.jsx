@@ -9,9 +9,7 @@ const SignUpIn = props => {
   const { params } = useParams();
   const { setUser } = props;
   const [userAction, setUserAction] = useState(params);
-  // const [signUpClass, setSignUpClass] = useState('');
-  // const [signInClass, setSignInClass] = useState('opacity-50');
-  // const { params } = useParams();
+
   useEffect(() => {
     setUserAction(params);
   }, [params]);
