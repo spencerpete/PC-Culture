@@ -9,7 +9,7 @@ export default function Footer() {
       <a href="https://www.linkedin.com/in/christianbolus/" target="_blank" rel="noreferrer">
         Christian <i class="fab fa-linkedin" />
       </a>
-      <a href="https://www.linkedin.com/in/arya-bayati/" target="_blank" rel="noreferrer">
+      <a href="https://www.linkedin.com/in/spencer-v-peterson/" target="_blank" rel="noreferrer">
         Spencer <i class="fab fa-linkedin" />
       </a>
       <a href="https://www.linkedin.com/in/james-lovell007/" target="_blank" rel="noreferrer">
