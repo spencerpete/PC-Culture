@@ -8,4 +8,5 @@ PC Culture is your one stop shop for PC parts! A full CRUD site for finding the 
 
 
 ## Component Hierarchy 
+![PC Culture (1)](https://user-images.githubusercontent.com/69879139/124804299-22c5b400-df28-11eb-8a12-b62251a7ea98.png)
 
