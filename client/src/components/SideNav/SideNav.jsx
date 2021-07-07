@@ -11,7 +11,7 @@ const SideNav = ({ user, show, toggleShow }) => {
           <h2 className="sidenav-brand">PC Culture</h2>
         </div>
         <div className="sidenav-links">
-          <Link className="sidenav-link" to="/products">
+          <Link className="sidenav-link" to="/products/all" onClick={toggleShow}>
             All Parts
           </Link>
           <Link className="sidenav-link" to="/products/new">

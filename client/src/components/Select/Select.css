@@ -1,7 +1,7 @@
 .select {
-  @apply p-2 text-black text-base bg-white border rounded-md
+  @apply p-2 text-black text-base bg-white border rounded-md appearance-none
 }
 
 .product-form-select{
-  @apply w-full flex focus:outline-none bg-white opacity-50;
+  @apply w-full flex focus:outline-none bg-white opacity-50 appearance-none;
 }
