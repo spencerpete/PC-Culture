@@ -8,7 +8,7 @@ const Layout = props => {
     setShow(prev => !prev);
   };
   return (
-    <div className="layout">
+    <div className="layout h-screen flex flex-col">
       <SideNav toggleShow={toggleShow} show={show} user={props.user} />
       <Nav toggleShow={toggleShow} user={props.user} />
       <div className="layout-children">{props.children}</div>
